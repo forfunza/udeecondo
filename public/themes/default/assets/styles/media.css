@@ -1,0 +1,262 @@
+@media only screen and (max-width:920px) , only screen and (max-device-width : 920px){
+	.container,header,.maincontainer{
+		width:auto;
+		padding:0px 40px;
+	}
+	.flexslider{
+		width:100%;
+		float:none;
+		position:relative;
+		z-index:9;
+		}
+	.regis-form{
+		height:auto;
+		margin-bottom:20px;
+		}
+	nav ul li a{
+		padding: 3px 10px;
+		}
+	nav{
+		border-top:none;
+		}
+	.logo-left{
+		text-align:center;
+		float:none;
+		margin-right:0px;
+		}
+	.menu{ padding-top:0px;}
+	 .flex-direction-nav .flex-prev { opacity: 1; left: 10px;}
+  .flex-direction-nav .flex-next { opacity: 1; right: 10px;}
+  .accordion-wrapper{
+	  width: 100% !important;
+height: 100% !important;
+	  }
+	  .slide{
+		  position:relative !important;
+		  left:0px !important;
+		  float:left;
+		  height:auto !important;
+		  width:49% !important;
+		  margin-bottom:10px !important;
+		  }
+		 .accordion-wrapper img{
+			 max-width:100% !important;
+			 }
+			.fotorama__nav,.fotorama__stage,.fotorama{
+				width:100% !important;
+				}
+		.cml{
+			float:none;
+			width:100%;
+			}
+		.cb input[type="text"] ,.cb textarea{
+	width:99%;
+	}
+input[type="text"].st{
+	width: 99%;
+	float:none;
+	margin-right:0px;
+	}
+.cb input[type="submit"]{
+	margin-right:20px;
+	}
+	.phase-1,.phase-2,.floor-1,.floor-2,.floor-3,.floor-4,.floor-5,.floor-6,.floor-7,.floor-8{
+		display:none;
+		}
+	.floor-mobi{
+		display:block;
+		}
+	.fld{
+		padding-right:0px;
+		}
+	.fld li{
+		padding-left:5px;
+		background: #e3f0c9;
+		}
+		.fbtn{
+		margin-top: 0px !important;
+		margin-left: 10px !important;
+		}
+}
+@media only screen and (min-width:981px) {}
+@media only screen and (min-width:980px) and (max-width:1100px){}
+@media only screen and (min-width:320px) and (max-width:980px){}
+@media only screen and (max-device-width:1280px){}
+
+@media only screen and (max-width:980px),(max-device-width:1024px){}
+@media (max-width: 836px) , only screen and (max-device-width : 836px){
+	.container,header,.maincontainer{
+		width:auto;
+		padding:0px 40px;
+	}
+	.pi-content{
+		position:relative;
+		right:0px;
+		height:100%;
+		width:100%;
+		background:none;
+		padding: 0px;
+		white-space: pre-line;
+		padding-bottom:30px;
+		}
+	.bg-project-info,.bg-project-info img{
+		height:auto;
+		max-width: 100%;
+		position:relative;
+		}
+	.news-preview{
+		width:100%;
+		}
+	.news-headlines{
+		width:auto;
+		}
+	.news-headlines li{
+		float:left;
+		margin-right:3px;
+		}
+	.news-preview h2{
+		position:relative;
+		top:0px;
+		left:0px;
+		}
+	.np-block .nt{
+		width:100%;
+		max-height:none;
+		float:none;
+		margin-bottom:20px;
+		margin-top:30px;
+		}
+	.more-btn{
+		display:none;
+		}
+	.inn-npnav .more-btn{
+		display: inline-block;
+		}
+	.pgl,.pgr{
+		float:none;
+		width:100%;
+		margin-left:0px;
+		}
+	#slider-pg{
+		max-height:407px;
+		}
+	#slider-pg img{
+		width:100%;
+		}
+	.jl{
+		width:100%;
+		float:none;
+		margin-bottom:30px;
+		}
+	.jr{
+		text-align:center;
+		}
+	}
+@media only screen and (max-width : 750px), only screen and (max-device-width : 750px){
+	.container,header,.maincontainer{
+		width:auto;
+		padding:0px 20px;
+	}
+.fc-1, .fc-2{
+	width:230px;
+	}
+	
+		footer{
+			font-size:12px;
+			}
+		.flex-control-nav{
+			width:auto;
+			padding-left:20px;
+			}
+		.flex-control-paging li a{
+			width:11px;
+			height:11px;
+			}
+		.maincontainer {
+			margin-top: 10px;
+		}
+		.language ul{
+			position:absolute;
+			right:20px;
+			top:0px;
+			}
+		.language ul li a.active{
+			display:none;
+			}
+		.language ul li a{
+			background: #9f8030;
+			color: #fff;
+			}
+		.pi-content{
+			font-family:Arial, Helvetica, sans-serif;
+			font-size:14px;
+			}
+		.map-box{
+			font-size:24px;
+			}
+	}
+	@media only screen and (max-width : 530px), only screen and (max-device-width : 530px){
+			.ft span{
+		font-size:18px;
+		}
+	.ft span.fl{
+		margin-right:0px;
+		}
+	.fc-1, .fc-2{
+		margin-right:10px;
+		width:auto;
+		}
+	.fc-1 ul li,.ft span.fl{
+		font-size:13px;
+		}
+	.fc-3{
+		clear:none;
+		}
+	.slide{
+		width:100% !important;
+		}
+		.news-headlines li{
+			padding: 6px;
+		font-size: 16px;
+			}
+		h1.mp{
+			font-size:28px;
+			line-height:34px;
+			}
+		.ncontent{
+			margin-top:20px;
+			}
+		}
+	@media only screen and (max-width : 400px){
+	
+.xpadding-10{
+	padding-bottom:10px;
+	padding-top: 10px !important;
+	}
+footer {
+font-size: 10px;
+}
+
+	.fc-1{
+		float:none;
+		}
+	.fc-1 ul li{
+		float:left;
+		margin-right:10px;
+		}
+	.tkh-logo,.fc-2,.fc-3{
+		display:none;
+		}
+	.logo-left{
+		clear:both;
+		border:none;
+		}
+	.regis-form h1{
+		font-size: 45px;
+line-height: 30px;
+		}
+		.fotorama__arr{
+			display:none !important;
+			}
+	
+		}

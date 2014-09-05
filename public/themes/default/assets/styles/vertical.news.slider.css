@@ -1,0 +1,136 @@
+.news-holder p {
+    margin-bottom: 12px;
+}
+
+.news-holder {
+    margin: 0 auto;
+    font-size: 13px;
+}
+
+.news-holder * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.news-headlines {
+  list-style: none;
+  position: relative;
+}
+
+  .news-headlines li {
+    padding: 5px 10px 5px 24px;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 20;
+	background:#e3f0c9;
+	font-size:20px;
+	font-family: 'Conv_Quark-Bold';
+  }
+ .news-headlines li.selected{
+	  background:#678c22;
+	  color:#FFF;
+	  }
+
+  .nh-anim {
+    -webkit-transition: all .15s ease-out;
+    -moz-transition: all .15s ease-out;
+    -o-transition: all .15s ease-out;
+    transition: all .15s ease-out;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+
+  .news-headlines li:hover, a:hover {
+      cursor: pointer;
+  }
+.highlight{
+	display:none;
+	}
+
+.news-headlines {
+   float: left;
+   width: 25%;
+}
+
+.news-preview {
+position: relative;
+width:70%;
+float:left;
+height:auto !important;
+}
+.news-preview h2{
+	font-size:30px;
+	font-family: 'Conv_Quark-Bold';
+	font-weight:normal;
+	position:absolute;
+	left: 12px;
+	top: -50px;
+	margin:0px;
+	padding:0px;
+	color:#678c22;
+	}
+
+  .news-preview img {
+    display: block;
+    width: 100%;
+	max-width:100%;
+    height: auto;
+    margin: 0 auto 5px auto;
+  } 
+
+.news-content {
+    z-index: 10;
+    padding: 0px 10px;
+    top: 0;
+    left: 0;
+    display: none;
+	margin-bottom: 50px;
+}
+
+.top-content {
+    display: block;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+.fld{
+	padding-right: 23px;
+	max-height: 400px;
+	overflow: auto;
+	}
+.fld li{
+	background: none;
+padding-left: 0px;
+text-align: center;
+margin-bottom: 9px;
+	}
