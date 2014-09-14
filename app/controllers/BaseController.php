@@ -1,7 +1,23 @@
 <?php
 
 class BaseController extends Controller {
+	/**
+     * Theme instance.
+     *
+     * @var \Teepluss\Theme\Theme
+     */
+    protected $theme;
 
+    /**
+     * Construct
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        // Using theme as a global.
+        $this->theme = Theme::uses('default')->layout('default');
+    }
 	/**
 	 * Setup the layout used by the controller.
 	 *

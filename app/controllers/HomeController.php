@@ -15,9 +15,168 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
+	public function index()
 	{
-		return View::make('hello');
+
+
+        $view = array();
+
+        return $this->theme->scope('home.index', $view)->render();
 	}
+	// Project
+	public function detail()
+	{
+
+
+        $view = array();
+
+        return $this->theme->scope('information.detail', $view)->render();
+	}
+
+	public function concept()
+	{
+
+
+        $view = array();
+
+        return $this->theme->scope('information.concept', $view)->render();
+	}
+
+	public function facility()
+	{
+
+
+        $view = array();
+
+        return $this->theme->scope('information.facility', $view)->render();
+	}
+
+	//Plan
+	public function master()
+	{
+
+
+        $view = array();
+
+        return $this->theme->scope('plan.master', $view)->render();
+	}
+
+	public function floor()
+	{
+
+
+        $view = array();
+       
+        $this->theme->asset()->container('addon-css')->usePath()->add('tipsy', 'styles/tipsy.css');
+        $this->theme->asset()->container('addon-js')->usePath()->add('tipsy', 'js/jquery.tipsy.js');
+        $this->theme->asset()->container('addon-inline')->writeScript('tipsy', '
+		    $(function() {
+		         $(".tooltipe").tipsy({gravity: "e"});
+		    })
+		');
+        
+
+        return $this->theme->scope('plan.floor', $view)->render();
+	}
+
+	public function floor_detail()
+	{
+
+
+        $view = array();
+
+        
+        
+
+        return $this->theme->scope('plan.floor-detail', $view)->render();
+	}
+
+	public function room()
+	{
+
+
+        $view = array();
+
+        return $this->theme->scope('plan.room', $view)->render();
+	}
+
+	public function gallery()
+	{
+
+
+        $view = array();
+
+        return $this->theme->scope('gallery.index', $view)->render();
+	}
+
+	public function news()
+	{
+
+
+        $view = array();
+
+        return $this->theme->scope('news.index', $view)->render();
+	}
+
+	public function news_detail()
+	{
+
+
+        $view = array();
+
+        return $this->theme->scope('news.detail', $view)->render();
+	}
+
+	public function progress()
+	{
+
+
+        $view = array();
+
+        return $this->theme->scope('progress.index', $view)->render();
+	}
+
+	public function progress_detail()
+	{
+
+
+        $view = array();
+
+        return $this->theme->scope('progress.detail', $view)->render();
+	}
+
+	public function contact()
+	{
+
+
+        $view = array();
+
+        return $this->theme->scope('contact.index', $view)->render();
+	}
+
+	public function job()
+	{
+
+
+        $view = array();
+   
+
+  		
+
+        $this->theme->asset()->container('addon-inline')->writeScript('Accordion1', '
+		    var Accordion1 = new Spry.Widget.Accordion("Accordion1");
+		');
+
+		$this->theme->asset()->container('addon-css')->usePath()->add('SpryAccordion', 'SpryAssets/SpryAccordion.css');
+        $this->theme->asset()->container('header')->usePath()->add('Spry', 'SpryAssets/SpryAccordion.js', array('fotorama'));
+        return $this->theme->scope('contact.job', $view)->render();
+	}
+
+	public function handleRegister()
+	{
+
+		dd(Input::get());
+	}
+
 
 }

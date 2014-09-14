@@ -126,6 +126,7 @@ return array(
 		'Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider',
 		'Krucas\Notification\NotificationServiceProvider',
 		'Teepluss\Theme\ThemeServiceProvider',
+		'Philo\Translate\TranslateServiceProvider',
 
 	),
 

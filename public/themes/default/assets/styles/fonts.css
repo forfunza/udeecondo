@@ -13,5 +13,14 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'thai_sans_literegular';
+	src: url('fonts/thaisanslite_r1-webfont.eot');
+	src: local('☺'), url('fonts/thaisanslite_r1-webfont.woff') format('woff'), url('fonts/thaisanslite_r1-webfont.ttf') format('truetype'), url('fonts/thaisanslite_r1-webfont.svg') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+
 
 

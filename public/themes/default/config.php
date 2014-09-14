@@ -36,7 +36,7 @@ return array(
         'before' => function($theme)
         {
             // You can remove this line anytime.
-            $theme->setTitle('Copyright ©  2013 - Laravel.in.th');
+            $theme->setTitle('Copyright ©  2014 - Udeecondo');
 
             // Breadcrumb template.
             // $theme->breadcrumb()->setTemplate('
@@ -67,6 +67,8 @@ return array(
             // {
             //     $view->with('auth', Auth::user());
             // });
+
+            
         },
 
         // Listen on event before render a layout,
@@ -76,6 +78,27 @@ return array(
             'default' => function($theme)
             {
                 // $theme->asset()->usePath()->add('ipad', 'css/layouts/ipad.css');
+                $theme->asset()->usePath()->add('font', 'styles/fonts.css',array(), array('media' => 'screen, projection'));
+                $theme->asset()->usePath()->add('main', 'styles/main.css',array('font'), array('media' => 'screen, projection'));
+                $theme->asset()->usePath()->add('stylemenu', 'styles/stylemenu.css',array('font'), array('media' => 'screen'));
+                $theme->asset()->usePath()->add('flexslider', 'styles/flexslider.css',array('font'), array('media' => 'screen'));
+                $theme->asset()->usePath()->add('raccordion', 'styles/raccordion.css',array('font'));
+                $theme->asset()->usePath()->add('vertical', 'styles/vertical.news.slider.css',array('font'));
+                $theme->asset()->usePath()->add('fotorama', 'styles/fotorama.css',array('font'));
+                $theme->asset()->usePath()->add('media', 'styles/media.css',array('font'), array('media' => 'screen, projection'));
+
+                $theme->asset()->container('header')->usePath()->add('jquery', 'js/jquery.min.js');
+                $theme->asset()->container('header')->usePath()->add('chrome', 'js/chrome.js', array('jquery'));
+                $theme->asset()->container('header')->usePath()->add('menu', 'js/menu.js', array('jquery'));
+                $theme->asset()->container('header')->usePath()->add('fotorama', 'js/fotorama.js', array('jquery'));
+
+                $theme->asset()->container('footer')->usePath()->add('zaccordion', 'js/jquery.zaccordion.js');
+                $theme->asset()->container('footer')->usePath()->add('flexslider', 'js/jquery.flexslider.js', array('zaccordion'));
+                
+                $theme->asset()->container('footer-bottom')->usePath()->add('slider', 'js/vertical.news.slider.js');
+                
+
+                
             }
 
         )

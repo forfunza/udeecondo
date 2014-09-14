@@ -122,3 +122,6 @@ html[xmlns] .slides {display: block;}
 #carousel-pg{
 	max-height:101px;
 	}
+#carousel-pg .flex-viewport ul li.flex-active-slide{
+	opacity:1;
+	}

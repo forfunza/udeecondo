@@ -229,22 +229,25 @@ footer{
 	}
 .pi-content{
 	white-space: pre;
-	font-family: 'Conv_Quark-Bold';
-	font-size: 20px;
+	font-family: 'thai_sans_literegular';
+	color: #FFF;
+	font-size: 18px;
 	position: absolute;
+	line-height: 18px;
 	right: 0px;
 	top: 0px;
-	width: 430px;
-	height: 731px;
-	padding-right: 12px;
+	width: 428px;
+	height: 648px;
+	padding-right: 5px;
 	padding-top: 30px;
 	overflow: auto;
 	word-break: break-word;
-	background: url(../images/info-bg.png) right top no-repeat;
-	padding-left: 85px;
+	background: url(../images/info-bg.png);
+	padding-left: 50px;
+	font-weight: bold;
 	}
 .bg-project-info{
-	height:761px;
+	height:678px;
 	overflow:hidden;
 	margin-bottom: 30px;
 	position:relative;
@@ -363,14 +366,16 @@ footer{
 	}
 h1.mp{
 	text-align:center;
-	font-size:36px;
-	line-height:48px;
+	font-size: 28px;
+line-height: 34px;
 	color:#423202;
 	max-width:860px;
 	margin:0 auto;
 	margin-top:30px;
+	
 	}
 .ncontent{
+	font-family: 'thai_sans_literegular';
 	margin:0 auto;
 	margin-top:30px;
 	line-height:28px;
@@ -386,6 +391,9 @@ h1.mp{
 	}
 .inn-npnav .poston{
 	float:right;
+	font-family: 'thai_sans_literegular';
+	font-size:22px;
+	font-weight:bold;
 	}
 .inn-npnav .more-btn{
 	float:none
@@ -407,14 +415,16 @@ h1.mp{
 	font-size:20px;
 	}
 .maincontainer th{
-	font-family: 'Conv_Quark-Bold';
-	font-weight:normal;
+	font-family: 'thai_sans_literegular';
+	font-weight:bold;
 	}
 .tt{
-	font-family: 'Conv_Quark-Bold';
+	font-family: 'thai_sans_literegular';
 	text-decoration:underline;
+	font-weight:bold;
 	}
 .pgl{
+	font-family: 'thai_sans_literegular';
 	width:60%;
 	float:left;
 	margin-bottom:30px;
@@ -665,10 +675,10 @@ font-family: 'Conv_Quark-Bold';
 	vertical-align:middle;
 	}
 .arrm{
-	position:absolute;
-	top:0px;
-	left:0px;
-	width: 90px;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 70px;
 	}
 .caret{
 	display:inline-block;
