@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'udeecondo',
-			'username'  => 'root',
-			'password'  => 'root',
+			'database'  => 'coolspace_ud',
+			'username'  => 'coolspace_ud',
+			'password'  => 'hyJzHGy1',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
