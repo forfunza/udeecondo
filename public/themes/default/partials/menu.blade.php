@@ -5,7 +5,7 @@
         <div class="mobile-main-menu"><a id="touch-menu" class="mobile-menu" href="#">{{{ trans('menu.menu') }}}</a></div>
         <nav>
             <ul class="menu">
-                <li><a href="{{ action('HomeController@index') }}" class="{{ empty(Request::segment(2)) ? 'active' : ''  }}">{{{ trans('menu.home') }}}</a></li>
+                <li><a href="{{ action('HomeController@index') }}" class="{{ Request::segment(2) == '' ? 'active' : ''  }}">{{{ trans('menu.home') }}}</a></li>
                 <li><a class="{{ Request::segment(2) == 'project' ? 'active' : ''  }}">{{{ trans('menu.information') }}} <span class="caret"></span></a>
                 <ul class="sub-menu">
                     <li><a href="{{ action('HomeController@detail') }}">{{{ trans('menu.detail') }}}</a></li>
