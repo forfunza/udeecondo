@@ -1,6 +1,6 @@
 <section>
     <div class="container">
-        <div class="logo-left"><a href="index.html"><img src="{{ asset('themes/default/assets/images/udeecondo-logo.png') }}" /></a></div>
+        <div class="logo-left"><a href="{{ action('HomeController@index') }}"><img src="{{ asset('themes/default/assets/images/udeecondo-logo.png') }}" /></a></div>
         <!--Main menu-->
         <div class="mobile-main-menu"><a id="touch-menu" class="mobile-menu" href="#">{{{ trans('menu.menu') }}}</a></div>
         <nav>
