@@ -33,7 +33,8 @@ class HomeController extends BaseController {
 
         $view = array();
 
-        if(!empty(Session::get('message'))){
+        if (Session::has('message'))
+		{
         	$this->theme->asset()->container('addon-inline')->writeScript('alert', '
 			    $(function() {
 			         alert("'.Session::get('message').'"); 
@@ -190,7 +191,8 @@ class HomeController extends BaseController {
 
 	public function contact()
 	{
-		if(!empty(Session::get('message'))){
+		if (Session::has('message'))
+		{
         	$this->theme->asset()->container('addon-inline')->writeScript('alert', '
 			    $(function() {
 			         alert("'.Session::get('message').'"); 
