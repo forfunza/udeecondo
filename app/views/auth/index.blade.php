@@ -39,7 +39,7 @@
         <div class="login-wrap">
 
             <div class="user-login-info">
-            @if(!empty(Session::get('message')))
+            @if(Session::has('message'))
             <div class="alert alert-success fade in">
                 <button data-dismiss="alert" class="close close-sm" type="button">
                     <i class="fa fa-times"></i>

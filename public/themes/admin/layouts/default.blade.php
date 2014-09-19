@@ -37,7 +37,7 @@
     <section id="main-content">
 
         <section class="wrapper">
-        @if(!empty(Session::get('message')))
+        @if(Session::has('message'))
         <div class="alert alert-success fade in">
             <button data-dismiss="alert" class="close close-sm" type="button">
                 <i class="fa fa-times"></i>
