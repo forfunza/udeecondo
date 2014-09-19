@@ -1,0 +1,116 @@
+<?php
+
+class $NAME$ extends \BaseController {
+
+	/**
+	 * Display a listing of $COLLECTION$
+	 *
+	 * @return Response
+	 */
+	public function index()
+	{
+		$$COLLECTION$ = $MODEL$::all();
+
+		$view = array(
+			'$COLLECTION$' => $$COLLECTION$
+			);
+
+		return $this->theme->scope('$COLLECTION$.index', $view)->render();
+	}
+
+	/**
+	 * Show the form for creating a new $RESOURCE$
+	 *
+	 * @return Response
+	 */
+	public function create()
+	{
+		
+		return $this->theme->scope('$COLLECTION$.create', $$COLLECTION$)->render();
+	}
+
+	/**
+	 * Store a newly created $RESOURCE$ in storage.
+	 *
+	 * @return Response
+	 */
+	public function store()
+	{
+		$validator = Validator::make($data = Input::all(), $MODEL$::$rules);
+
+		if ($validator->fails())
+		{
+			return Redirect::back()->withErrors($validator)->withInput();
+		}
+
+		$MODEL$::create($data);
+
+		return Redirect::action('$COLLECTION$@index')->with('message','');
+	}
+
+	/**
+	 * Display the specified $RESOURCE$.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function show($id)
+	{
+		$$RESOURCE$ = $MODEL$::findOrFail($id);
+
+		return $this->theme->scope('$COLLECTION$.show', $$COLLECTION$)->render();
+	}
+
+	/**
+	 * Show the form for editing the specified $RESOURCE$.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function edit($id)
+	{
+		$$RESOURCE$ = $MODEL$::find($id);
+
+		$view = array(
+			'$RESOURCE$' => $$RESOURCE$
+			);
+		
+		return $this->theme->scope('$COLLECTION$.edit', $view)->render();
+	}
+
+	/**
+	 * Update the specified $RESOURCE$ in storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function update($id)
+	{
+		$$RESOURCE$ = $MODEL$::findOrFail($id);
+
+		$validator = Validator::make($data = Input::all(), $MODEL$::$rules);
+
+		if ($validator->fails())
+		{
+			return Redirect::back()->withErrors($validator)->withInput();
+		}
+
+		$$RESOURCE$->update($data);
+
+		return Redirect::action('$COLLECTION$@index')->with('message','');
+	}
+
+	/**
+	 * Remove the specified $RESOURCE$ from storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function destroy($id)
+	{
+		$MODEL$::destroy($id);
+
+		return Redirect::action('$COLLECTION$@index')->with('message','');
+	}
+
+}

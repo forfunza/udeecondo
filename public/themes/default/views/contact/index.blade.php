@@ -3,7 +3,7 @@
     <ul>
     	<li><a href="https://maps.google.co.th/maps/ms?msid=205255050427221366018.0004cdfd497b40f7fb5dd&msa=0&ie=UTF8&ll=13.76672,100.599575&spn=0.005554,0.010568&t=m&output=embed" target="_blank"><span class="google-map"></span></a></li>
         <li><a class="fancybox" href="{{ asset('themes/default/assets/images/b-map.png') }}"><span class="zoom-map"></span></a></li>
-        <li><a onclick="openWin()"><span class="print-map"></span></a></li>
+        <!-- <li><a onclick="openWin()"><span class="print-map"></span></a></li> -->
     </ul>
     <div class="clear"></div>
 </div>
@@ -20,16 +20,16 @@
     </div>
     <div class="cb">
     	<h1>ติดต่อขอข้อมูลเพิ่มเติม</h1>
-        <form action="#">
-        	<input type="text" name="name" class="st" placeholder="ชื่อ :" />
-            <input type="text" name="name" class="st" placeholder="นามสกุล :" />
-            <input type="text" name="name" class="st" placeholder="โทร :" />
-            <input type="text" name="name" class="st" placeholder="อีเมล์ :" />
-            <input type="text" name="name"  placeholder="หัวข้อ :" />
-            <textarea  placeholder="ข้อความ :" ></textarea>
+        {{ Form::open(array('action' => array('HomeController@handleContact'), 'method' => 'post')) }}
+        	<input type="text" name="firstname" class="st" placeholder="ชื่อ :" required />
+            <input type="text" name="lastname" class="st" placeholder="นามสกุล :" required />
+            <input type="text" name="tel" class="st" placeholder="โทร :" />
+            <input type="text" name="email" class="st" placeholder="อีเมล์ :" required />
+            <input type="text" name="topic"  placeholder="หัวข้อ :" required />
+            <textarea name="message" placeholder="ข้อความ :" required ></textarea>
             <input type="submit" name="submit" value="ยืนยัน" />
             <input type="reset" name="reset" value="ล้างข้อมูล" />
-        </form>
+        {{ form::close() }}
         <div class="clear"></div>
     </div>
     <div class="job"><a href="{{ action('HomeController@job') }}"><i class="jmem"></i>ร่วมงานกับเรา<i class="jar"></i></a></div>

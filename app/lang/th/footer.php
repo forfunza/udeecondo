@@ -4,4 +4,5 @@
 
 return  array(
 	'more_information'   => 'สอบถามข้อมูลเพิ่มเติม',
+	'follow'   => 'ติดตามเรา'
 );

@@ -1,31 +1,29 @@
 <div class="bg-project-info"><img src="{{ asset('themes/default/assets/images/info-img.jpg') }}" /></div>
-<div class="pi-content">ชื่อโครงการ :   อยู่ดีคอนโด
+<div class="pi-content">ชื่อโครงการ :   {{ $project->first()->pivot->name }}
 
-ทำเลที่ตั้ง   :   ตำบลโสธร อำเภอเมือง จ.ะเชิงเทราติดโรบินสัน 
-                 ใกล้สนามบินสุวรรณภูมิ 
+ทำเลที่ตั้ง   :   {{ $project->first()->pivot->address }} 
 
 จำนวน (ชั้น/ยูนิต) :
-เฟส 1 :  อาคารชุดสูง 7 ชั้น  4  อาคาร จำนวน  316 ยูนิต
-เฟส 2 :  อาคารชุดสูง 8 ชั้น  4  อาคาร จำนวน  607 ยูนิต
-
-ราคาเริ่มต้น :
+@foreach ($units as $unit) 
+{{ $unit->pivot->name }} :  {{ $unit->pivot->building }} จำนวน  {{ $unit->pivot->unit }} ยูนิต
+@endforeach
+ราคาเริ่มต้น :   {{ $project->first()->price }}
 
 รูปแบบห้องชุด :
-                :  ห้องชุดขนาด 22.5  ตารางเมตร
-                :  ห้องชุดขนาด 24  ตารางเมตร 
+@foreach ($rooms as $room) 
+:   {{ $room->pivot->name }} 
+@endforeach 
 
 พื้นที่จอดรถ :
-                เฟส 1 :  120 คัน
-                เฟส 2 :  180 คัน
+@foreach ($units as $unit) 
+{{ $unit->pivot->name }} :  {{ $unit->parking }} คัน
+@endforeach
 
 สิ่งอำนวยความสะดวก : 
-                สโมสร , สระว่ายน้ำ , ฟิตเนต , 
-                ร้านอาหาร , ร้านสะดวกซื้อ ,
-                สวนสาธารณะ , Joggin Track
+@foreach ($facilities as $facility) 
+{{ $facility->pivot->name }} 
+@endforeach 
 
 ระบบรักษาความปลอดภัย  :  
-                ระบบรักษาความปลอดภัยด้วย รปภ.
-                24 ชั่วโมง  เข้า-ออกโครงการและ
-                ตัวอาคารชุด้วยระบบ Access Card
-                เพิ่มพื้นที่ส่วนตัวสำหรับคุณ 
+{{ $project->first()->pivot->security }} 
 </div>

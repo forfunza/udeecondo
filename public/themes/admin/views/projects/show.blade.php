@@ -1,0 +1,1 @@
+/Applications/MAMP/htdocs/udeecondo/app/views/projects/show.blade.php

@@ -11,7 +11,8 @@
 		"mcamara/laravel-localization": "0.14.*",
 		"edvinaskrucas/notification": "3.*",
 		"philo/laravel-translate": "dev-master",
-		"teepluss/theme": "dev-master"
+		"teepluss/theme": "dev-master",
+		"way/generators": "~2.0"
 	},
 	"autoload": {
 		"classmap": [

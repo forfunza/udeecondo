@@ -8,7 +8,7 @@
             </ul>
         </div>
         <div class="fc-2">
-            <span>{{{ trans('footer.more_information') }}}</span>
+            <span>{{{ trans('footer.follow') }}}</span>
             <ul>
                 <li><a href="#" class="tw">twitter</a></li>
                 <li><a href="#" class="fb">facebook</a></li>

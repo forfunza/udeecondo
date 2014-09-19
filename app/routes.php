@@ -10,7 +10,21 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+Route::any('/test', function()
+{
+    header('Access-Control-Allow-Origin: *');
+    header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
+    header('Access-Control-Allow-Headers: Accept, X-Requested-With');
+    // without credentials we can use * for origin
+    // header('Access-Control-Allow-Credentials: false');
+    header('HTTP/1.1 200 OK', true);
+    $facility = Facility::all();
 
+    return Response::json($facility);
+
+   
+    //dd($facility->languages);
+});
 
 Route::group(
 array(
@@ -20,6 +34,8 @@ array(
 function()
 {
     /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
+    
+
     Route::get('/', 'HomeController@index');
     
     Route::get('/project/detail', 'HomeController@detail');
@@ -34,7 +50,7 @@ function()
     Route::get('/gallery', 'HomeController@gallery');
 
     Route::get('/news', 'HomeController@news');
-    Route::get('/news/detail', 'HomeController@news_detail');
+    Route::get('/news/detail/{id}', 'HomeController@news_detail');
 
     Route::get('/progress', 'HomeController@progress');
     Route::get('/progress/detail', 'HomeController@progress_detail');
@@ -43,5 +59,44 @@ function()
     Route::get('/contact/job', 'HomeController@job');
 });
 
+Route::group(
+array(
+    'prefix' => 'backend',
+    'before' => 'auth.sentry'
+),
+function()
+{
+    
+    
+    /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
+    // Route::get('/project/general', 'ProjectController@general');
+    // Route::post('/project/modify', 'ProjectController@handleModify');
+    Route::resource('projects', 'ProjectsController');
+    Route::resource('facilities', 'FacilitiesController');
+    Route::resource('units', 'UnitsController');
+    Route::resource('news', 'NewsController');
+    Route::resource('concepts', 'ConceptsController');
+    Route::resource('galleries', 'GalleriesController');
+    Route::resource('rooms', 'RoomsController');
+    Route::resource('registers', 'RegistersController');
+});
+
+Route::group(
+array(
+    'prefix' => 'backend',
+),
+function()
+{
+    Route::get('/', 'AuthController@index');
+    Route::get('/create', 'AuthController@create');
+    Route::post('/auth', 'AuthController@authenticate');
+    Route::get('/logout', 'AuthController@logout');
+
+    
+});
+
+
+
 
 Route::post('/register', 'HomeController@handleRegister');
+Route::post('/contact', 'HomeController@handleContact');

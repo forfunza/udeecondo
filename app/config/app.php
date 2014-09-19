@@ -127,6 +127,7 @@ return array(
 		'Krucas\Notification\NotificationServiceProvider',
 		'Teepluss\Theme\ThemeServiceProvider',
 		'Philo\Translate\TranslateServiceProvider',
+		'Way\Generators\GeneratorsServiceProvider',
 
 	),
 

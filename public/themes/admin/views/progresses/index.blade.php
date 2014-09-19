@@ -1,0 +1,1 @@
+/Applications/MAMP/htdocs/udeecondo/app/views/progresses/index.blade.php

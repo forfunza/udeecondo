@@ -17,7 +17,7 @@ class CreateResgisterTable extends Migration {
 		    $table->increments('id');
 		    $table->string('firstname', 100);
 		    $table->string('lastname', 100);
-		    $table->string('tel', 10);
+		    $table->string('tel', 30);
 		    $table->string('email', 100);
 		    $table->text('message')->nullable();
 		    $table->timestamps();

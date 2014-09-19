@@ -16,6 +16,6 @@ return  array(
 	'news'               => 'ข่าวสารและโปรโมชั่น',
 	'plan'               => 'แปลน',
 	'project_plan'       => 'ผังโครงการ',
-	'project_progress'   => 'ความคืยหน้าโครงการ',
+	'project_progress'   => 'ความคืบหน้าโครงการ',
 	'room_plan'          => 'แปลนห้อง',
 );
