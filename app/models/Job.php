@@ -8,6 +8,10 @@ class Job extends \Eloquent {
 	];
 
 	// Don't forget to fill this array
-	protected $fillable = [];
+	protected $fillable = ['sex','age','name','description','requirement','information'];
+
+	public function languages() {
+        return $this->belongsToMany('Language')->withPivot('name','description','requirement','information');    
+    }
 
 }

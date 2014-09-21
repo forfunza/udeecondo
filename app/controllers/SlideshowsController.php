@@ -1,6 +1,6 @@
 <?php
 
-class SlideshowsController extends \BaseController {
+class SlideshowsController extends AdminController {
 
 	/**
 	 * Display a listing of slideshows
@@ -9,6 +9,12 @@ class SlideshowsController extends \BaseController {
 	 */
 	public function index()
 	{
+		$this->theme->asset()->container('inline-script')->writeScript('EditableTable', '
+	    	jQuery(document).ready(function() {
+	       		EditableTable.init();
+	    	});
+		');
+
 		$slideshows = Slideshow::all();
 
 		$view = array(
@@ -26,7 +32,7 @@ class SlideshowsController extends \BaseController {
 	public function create()
 	{
 		
-		return $this->theme->scope('slideshows.create', $slideshows)->render();
+		return $this->theme->scope('slideshows.create')->render();
 	}
 
 	/**
@@ -43,9 +49,21 @@ class SlideshowsController extends \BaseController {
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		Slideshow::create($data);
+		if(Input::hasFile('image')){
+			$dt = new DateTime;
+			$image = $dt->getTimestamp().'.'.Input::file('image')->getClientOriginalExtension();
+			Image::make(Input::file('image')->getRealPath())->save('farms/images/slideshows/'.$image);
+		}
 
-		return Redirect::action('slideshows@index')->with('message','');
+		Slideshow::create(
+			array(
+				'image' => asset('farms/images/slideshows/'.$image.'')
+			)
+		);
+
+		
+
+		return Redirect::action('SlideshowsController@index')->with('message','<strong>ยินดีด้วย!</strong> แก้ไขข้อมูลเรียบร้อยแล้ว.');
 	}
 
 	/**
@@ -86,6 +104,7 @@ class SlideshowsController extends \BaseController {
 	 */
 	public function update($id)
 	{
+
 		$slideshow = Slideshow::findOrFail($id);
 
 		$validator = Validator::make($data = Input::all(), Slideshow::$rules);
@@ -95,9 +114,26 @@ class SlideshowsController extends \BaseController {
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		$slideshow->update($data);
+		
 
-		return Redirect::action('slideshows@index')->with('message','');
+		if(Input::hasFile('image')){
+			$image = 'http://placehold.it/697x465&text=Image';
+			$dt = new DateTime;
+			$image = $dt->getTimestamp().'.'.Input::file('image')->getClientOriginalExtension();
+			Image::make(Input::file('image')->getRealPath())->save('farms/images/slideshows/'.$image);
+
+			$slideshow->update(
+			array(
+					'image' => asset('farms/images/slideshows/'.$image.'')
+				)
+			);
+		}
+
+		
+
+		
+
+		return Redirect::action('SlideshowsController@index')->with('message','<strong>ยินดีด้วย!</strong> แก้ไขข้อมูลเรียบร้อยแล้ว.');
 	}
 
 	/**
@@ -110,7 +146,7 @@ class SlideshowsController extends \BaseController {
 	{
 		Slideshow::destroy($id);
 
-		return Redirect::action('slideshows@index')->with('message','');
+		return Redirect::action('SlideshowsController@index')->with('message','<strong>ยินดีด้วย!</strong> แก้ไขข้อมูลเรียบร้อยแล้ว.');
 	}
 
 }

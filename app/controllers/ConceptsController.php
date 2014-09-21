@@ -115,19 +115,23 @@ class ConceptsController extends AdminController {
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		$image = 'http://placehold.it/697x465&text=Image';
+		
 
 		if(Input::hasFile('image')){
+			$image = 'http://placehold.it/697x465&text=Image';
+
 			$dt = new DateTime;
 			$image = $dt->getTimestamp().'.'.Input::file('image')->getClientOriginalExtension();
 			Image::make(Input::file('image')->getRealPath())->save('farms/images/concepts/'.$image);
-		}
 
-		$concept->update(
+			$concept->update(
 			array(
 					'image' => asset('farms/images/concepts/'.$image.'')
 				)
 			);
+		}
+
+		
 
 		return Redirect::action('ConceptsController@index')->with('message','<strong>ยินดีด้วย!</strong> แก้ไขข้อมูลเรียบร้อยแล้ว.');
 	}

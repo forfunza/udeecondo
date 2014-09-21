@@ -54,19 +54,21 @@ class FacilitiesController extends AdminController {
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 		//dd($data);
-		$image = 'http://placehold.it/697x465&text=Image';
+		
 
 		if(Input::hasFile('image')){
+			$image = 'http://placehold.it/697x465&text=Image';
 			$dt = new DateTime;
 			$image = $dt->getTimestamp().'.'.Input::file('image')->getClientOriginalExtension();
 			Image::make(Input::file('image')->getRealPath())->save('farms/images/'.$image);
-		}
-
-		$facility = Facility::create(
+			$facility = Facility::create(
 			array(
 					'image' => asset('farms/images/'.$image.'')
 				)
 			);
+		}
+
+		
 
 		$facility->languages()->sync($data['facility_description']);
 

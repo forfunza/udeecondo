@@ -34,6 +34,12 @@
                 </a>
             </li>
             <li>
+                <a href="{{ action('SlideshowsController@index') }}">
+                    <i class="fa fa-bullhorn"></i>
+                    <span>สไลด์โชว์</span>
+                </a>
+            </li>
+            <li>
                 <a href="{{ action('NewsController@index') }}">
                     <i class="fa fa-bullhorn"></i>
                     <span>ข่าวสาร</span>
@@ -46,7 +52,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ action('JobsController@index') }}">
                     <i class="fa fa-user"></i>
                     <span>งาน</span>
                 </a>

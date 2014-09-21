@@ -1,6 +1,6 @@
 <?php
 
-class JobsController extends \BaseController {
+class JobsController extends AdminController {
 
 	/**
 	 * Display a listing of jobs
@@ -9,6 +9,12 @@ class JobsController extends \BaseController {
 	 */
 	public function index()
 	{
+		$this->theme->asset()->container('inline-script')->writeScript('EditableTable', '
+	    	jQuery(document).ready(function() {
+	       		EditableTable.init();
+	    	});
+		');
+
 		$jobs = Job::all();
 
 		$view = array(
@@ -25,8 +31,12 @@ class JobsController extends \BaseController {
 	 */
 	public function create()
 	{
-		
-		return $this->theme->scope('jobs.create', $jobs)->render();
+		$languages = Language::all();
+		$view = array(
+			'languages' => $languages
+			);
+
+		return $this->theme->scope('jobs.create', $view)->render();
 	}
 
 	/**
@@ -43,9 +53,11 @@ class JobsController extends \BaseController {
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		Job::create($data);
+		$job = Job::create($data);
 
-		return Redirect::action('jobs@index')->with('message','');
+		$job->languages()->sync($data['job_description']);
+
+		return Redirect::action('JobsController@index')->with('message','<strong>ยินดีด้วย!</strong> แก้ไขข้อมูลเรียบร้อยแล้ว.');
 	}
 
 	/**
@@ -70,9 +82,10 @@ class JobsController extends \BaseController {
 	public function edit($id)
 	{
 		$job = Job::find($id);
-
+		$languages = Language::all();
 		$view = array(
-			'job' => $job
+			'job' => $job,
+			'languages' => $languages
 			);
 		
 		return $this->theme->scope('jobs.edit', $view)->render();
@@ -97,7 +110,9 @@ class JobsController extends \BaseController {
 
 		$job->update($data);
 
-		return Redirect::action('jobs@index')->with('message','');
+		$job->languages()->sync($data['job_description']);
+
+		return Redirect::action('JobsController@index')->with('message','<strong>ยินดีด้วย!</strong> แก้ไขข้อมูลเรียบร้อยแล้ว.');
 	}
 
 	/**
@@ -110,7 +125,7 @@ class JobsController extends \BaseController {
 	{
 		Job::destroy($id);
 
-		return Redirect::action('jobs@index')->with('message','');
+		return Redirect::action('JobsController@index')->with('message','<strong>ยินดีด้วย!</strong> แก้ไขข้อมูลเรียบร้อยแล้ว.');
 	}
 
 }

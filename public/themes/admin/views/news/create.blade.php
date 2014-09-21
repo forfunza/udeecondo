@@ -1,4 +1,4 @@
-<form action="{{ action('NewsController@store') }}" enctype="multipart/form-data"  method="post" class="form-horizontal bucket-form ">
+{{ Form::open(array('action' => array('NewsController@store'), 'method' => 'post', 'class' => 'form-horizontal bucket-form' , 'enctype' => 'multipart/form-data')) }}
 	<section class="panel">
 		<header class="panel-heading">
 			ข่าวสาร
@@ -63,4 +63,4 @@
 			
 		</div>
 	</section>
-</form>
+{{ form::close() }}

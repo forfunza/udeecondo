@@ -79,6 +79,10 @@ function()
     Route::resource('galleries', 'GalleriesController');
     Route::resource('rooms', 'RoomsController');
     Route::resource('registers', 'RegistersController');
+    Route::resource('jobs', 'JobsController');
+    Route::resource('progresses', 'ProgressesController');
+    Route::resource('slideshows', 'SlideshowsController');
+ 
 });
 
 Route::group(
