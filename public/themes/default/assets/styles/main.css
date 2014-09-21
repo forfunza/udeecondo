@@ -228,7 +228,7 @@ footer{
 	display: block;
 	}
 .pi-content{
-	white-space: pre;
+	
 	font-family: 'thai_sans_literegular';
 	color: #FFF;
 	font-size: 18px;
@@ -688,4 +688,37 @@ font-family: 'Conv_Quark-Bold';
 	border-right: 5px solid transparent;
 	border-top: 5px solid #fff;
 	display:none;
+	}
+.pi-content span{
+	display: inherit;
+	line-height:22px;
+	margin-bottom: 20px;
+	}
+.projectinfoLeft{
+	float:left;
+	clear:left;
+	margin-right:10px;
+	width: 86px;
+	}
+.projectinfoRight{
+	overflow:hidden;
+	}
+.pi-content span.projectinfoLeft.infoau{
+	width:auto;
+	margin-bottom:0px;
+	}
+.pi-content span.projectinfoRight.nl{
+	display:block;
+	clear:both;
+	}
+.projectinfoRight ul{
+	clear:both;
+	margin:0px;
+	padding:0px;
+	}
+.pi-content span.projectinfoRight.nl.ml ul{
+	margin-left:96px;
+	}
+.projectinfoRight ul li{
+	list-style:none;
 	}

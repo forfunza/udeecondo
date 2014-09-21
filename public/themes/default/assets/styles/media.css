@@ -151,6 +151,28 @@ input[type="text"].st{
 	.jr{
 		text-align:center;
 		}
+		.pi-content{
+			font-family:Arial, Helvetica, sans-serif;
+			font-size:14px;
+			color: #423202;
+			font-weight: normal;
+			}
+		.map-box{
+			font-size:24px;
+			}
+		.pi-content{
+			white-space:normal;
+			}
+		.pi-content span{
+			display: inline-block;
+line-height: 16px;
+			}
+			.pi-content span.projectinfoRight.nl ul{
+				margin-top:10px;
+				}
+			.pi-content span.projectinfoRight.nl.ml ul{
+				margin-left:30px;
+				}
 	}
 @media only screen and (max-width : 750px), only screen and (max-device-width : 750px){
 	.container,header,.maincontainer{
@@ -187,15 +209,7 @@ input[type="text"].st{
 			background: #9f8030;
 			color: #fff;
 			}
-		.pi-content{
-			font-family:Arial, Helvetica, sans-serif;
-			font-size:14px;
-			color: #423202;
-			font-weight: normal;
-			}
-		.map-box{
-			font-size:24px;
-			}
+		
 	}
 	@media only screen and (max-width : 530px), only screen and (max-device-width : 530px){
 			.ft span{

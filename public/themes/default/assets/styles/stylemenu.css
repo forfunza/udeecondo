@@ -68,12 +68,12 @@ nav ul{
 		left: 0px;
 		height: 40px;
 		top:0px;
-		z-index: 9;
 		font-size: 22px;
 text-indent: 20px;
 line-height: 40px;
 font-family: 'Conv_Quark-Bold';
-
+position: relative;
+z-index: 999;
 		}
 	.menu{display:none;
 background: #4D4D4D;
