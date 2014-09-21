@@ -1,6 +1,6 @@
 <?php
 
-class ProgressesController extends \BaseController {
+class ProgressesController extends AdminController {
 
 	/**
 	 * Display a listing of progresses
@@ -9,6 +9,12 @@ class ProgressesController extends \BaseController {
 	 */
 	public function index()
 	{
+		$this->theme->asset()->container('inline-script')->writeScript('EditableTable', '
+	    	jQuery(document).ready(function() {
+	       		EditableTable.init();
+	    	});
+		');
+
 		$progresses = Progress::all();
 
 		$view = array(
@@ -25,8 +31,12 @@ class ProgressesController extends \BaseController {
 	 */
 	public function create()
 	{
-		
-		return $this->theme->scope('progresses.create', $progresses)->render();
+
+		$languages = Language::all();
+		$view = array(
+			'languages' => $languages
+			);
+		return $this->theme->scope('progresses.create',$view)->render();
 	}
 
 	/**
@@ -45,7 +55,25 @@ class ProgressesController extends \BaseController {
 
 		Progress::create($data);
 
-		return Redirect::action('progresses@index')->with('message','');
+		$image = 'http://placehold.it/697x465&text=Image';
+
+		if(Input::hasFile('image')){
+			
+			$dt = new DateTime;
+			$image = $dt->getTimestamp().'.'.Input::file('image')->getClientOriginalExtension();
+			Image::make(Input::file('image')->getRealPath())->save('farms/images/progress/'.$image);
+			
+		}
+
+		$progress = Progress::create(
+			array(
+					'image' => asset('farms/images/progress/'.$image.'')
+				)
+			);
+
+		$progress->languages()->sync($data['progress_description']);
+
+		return Redirect::action('ProgressesController@index')->with('message','<strong>ยินดีด้วย!</strong> แก้ไขข้อมูลเรียบร้อยแล้ว.');
 	}
 
 	/**
@@ -70,9 +98,11 @@ class ProgressesController extends \BaseController {
 	public function edit($id)
 	{
 		$progress = Progress::find($id);
+		$languages = Language::all();
 
 		$view = array(
-			'progress' => $progress
+			'progress' => $progress,
+			'languages' => $languages
 			);
 		
 		return $this->theme->scope('progresses.edit', $view)->render();
@@ -95,9 +125,25 @@ class ProgressesController extends \BaseController {
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		$progress->update($data);
+		if(Input::hasFile('image')){
+			$image = 'http://placehold.it/697x465&text=Image';
 
-		return Redirect::action('progresses@index')->with('message','');
+			$dt = new DateTime;
+			$image = $dt->getTimestamp().'.'.Input::file('image')->getClientOriginalExtension();
+			Image::make(Input::file('image')->getRealPath())->save('farms/images/progress/'.$image);
+			$progress->update(
+			array(
+					'image' => asset('farms/images/progress/'.$image.'')
+				)
+			);
+		}
+
+		
+
+		$progress->languages()->sync($data['progress_description']);
+
+
+		return Redirect::action('ProgressesController@index')->with('message','<strong>ยินดีด้วย!</strong> แก้ไขข้อมูลเรียบร้อยแล้ว.');
 	}
 
 	/**
@@ -110,7 +156,7 @@ class ProgressesController extends \BaseController {
 	{
 		Progress::destroy($id);
 
-		return Redirect::action('progresses@index')->with('message','');
+		return Redirect::action('ProgressesController@index')->with('message','<strong>ยินดีด้วย!</strong> แก้ไขข้อมูลเรียบร้อยแล้ว.');
 	}
 
 }

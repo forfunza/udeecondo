@@ -30,8 +30,11 @@ class HomeController extends BaseController {
 	public function index()
 	{
 		
+		$slideshows = Slideshow::all();
 
-        $view = array();
+        $view = array(
+        	'slideshows' => $slideshows
+        	);
 
         if (Session::has('message'))
 		{
@@ -173,18 +176,22 @@ class HomeController extends BaseController {
 
 	public function progress()
 	{
+		$progresses = Language::find($this->language_id)->progresses;
 
-
-        $view = array();
+        $view = array(
+        	'progresses' => $progresses
+        	);
 
         return $this->theme->scope('progress.index', $view)->render();
 	}
 
-	public function progress_detail()
+	public function progress_detail($id)
 	{
+		$progress = Language::find($this->language_id)->progresses->find($id);
 
-
-        $view = array();
+        $view = array(
+        	'progress' => $progress
+        	);
 
         return $this->theme->scope('progress.detail', $view)->render();
 	}
@@ -208,11 +215,11 @@ class HomeController extends BaseController {
 	public function job()
 	{
 
+		$jobs = Language::find($this->language_id)->jobs;
 
-        $view = array();
-   
-
-  		
+        $view = array(
+        	'jobs' => $jobs
+        	);
 
         $this->theme->asset()->container('addon-inline')->writeScript('Accordion1', '
 		    var Accordion1 = new Spry.Widget.Accordion("Accordion1");

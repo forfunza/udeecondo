@@ -46,7 +46,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ action('ProgressesController@index') }}">
                     <i class="fa fa-cog"></i>
                     <span>ความคืบหน้าโครงการ</span>
                 </a>

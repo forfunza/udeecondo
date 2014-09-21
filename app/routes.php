@@ -53,7 +53,7 @@ function()
     Route::get('/news/detail/{id}', 'HomeController@news_detail');
 
     Route::get('/progress', 'HomeController@progress');
-    Route::get('/progress/detail', 'HomeController@progress_detail');
+    Route::get('/progress/detail/{id}', 'HomeController@progress_detail');
 
     Route::get('/contact', 'HomeController@contact');
     Route::get('/contact/job', 'HomeController@job');

@@ -1,7 +1,10 @@
 <div class="flexslider">
     <ul class="slides">
-        <li><img src="{{ asset('themes/default/assets/images/slider/slide-1.jpg') }}" /></li>
-        <li><img src="{{ asset('themes/default/assets/images/slider/slide-2.jpg') }}" /></li>
+    	@if(!empty($slideshows))
+    	@foreach ($slideshows as $slide)
+    		<li><img src="{{ $slide->image }}" /></li>
+    	@endforeach
+    	@endif
     </ul>
 </div>
 <div class="regis-form">

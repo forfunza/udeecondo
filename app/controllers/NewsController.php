@@ -55,18 +55,21 @@ class NewsController extends AdminController {
 		}
 
 		
+		$image = 'http://placehold.it/697x465&text=Image';
 
 		if(Input::hasFile('image')){
-			$image = 'http://placehold.it/697x465&text=Image';
+			
 			$dt = new DateTime;
 			$image = $dt->getTimestamp().'.'.Input::file('image')->getClientOriginalExtension();
 			Image::make(Input::file('image')->getRealPath())->save('farms/images/news/'.$image);
-			$news = News::create(
+			
+		}
+
+		$news = News::create(
 			array(
 					'image' => asset('farms/images/news/'.$image.'')
 				)
 			);
-		}
 
 		
 
@@ -124,19 +127,22 @@ class NewsController extends AdminController {
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		$image = 'http://placehold.it/697x465&text=Image';
+		
 
 		if(Input::hasFile('image')){
+			$image = 'http://placehold.it/697x465&text=Image';
+
 			$dt = new DateTime;
 			$image = $dt->getTimestamp().'.'.Input::file('image')->getClientOriginalExtension();
 			Image::make(Input::file('image')->getRealPath())->save('farms/images/news/'.$image);
-		}
-
-		$news->update(
+			$news->update(
 			array(
 					'image' => asset('farms/images/news/'.$image.'')
 				)
 			);
+		}
+
+		
 
 		$news->languages()->sync($data['news_description']);
 

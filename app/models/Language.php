@@ -26,4 +26,8 @@ class Language extends \Eloquent {
     public function jobs() {
         return $this->belongsToMany('Job')->withPivot('name','description','requirement','information');    
     }
+
+    public function progresses() {
+        return $this->belongsToMany('Progress')->withPivot('name','description');    
+    }
 }
