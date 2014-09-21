@@ -3,8 +3,8 @@
         <div class="fc-1">
             <span>{{{ trans('footer.more_information') }}}</span>
             <ul>
-                <li>09 2259 2259</li>
-                <li>09 2279 2279</li>
+                <li><a href="tel:0922592259">09 2259 2259</a></li>
+                <li><a href="tel:0922792279">09 2279 2279</a></li>
             </ul>
         </div>
         <div class="fc-2">
