@@ -53,7 +53,7 @@ class ProgressesController extends AdminController {
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		Progress::create($data);
+		
 
 		$image = 'http://placehold.it/697x465&text=Image';
 
