@@ -57,20 +57,21 @@ class RoomsController extends AdminController {
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		
+		$image = 'http://placehold.it/697x465&text=Image';
 
 		if(Input::hasFile('image')){
-			$image = 'http://placehold.it/697x465&text=Image';
+			
 			$dt = new DateTime;
 			$image = $dt->getTimestamp().'.'.Input::file('image')->getClientOriginalExtension();
 			Image::make(Input::file('image')->getRealPath())->save('farms/images/rooms/'.$image);
-			$room = Room::create(
+			
+		}
+
+		$room = Room::create(
 			array(
 					'image' => asset('farms/images/rooms/'.$image.'')
 				)
 			);
-		}
-
 		
 
 		$room->languages()->sync($data['room_description']);
@@ -127,19 +128,20 @@ class RoomsController extends AdminController {
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		$image = 'http://placehold.it/697x465&text=Image';
+		
 
 		if(Input::hasFile('image')){
 			$dt = new DateTime;
 			$image = $dt->getTimestamp().'.'.Input::file('image')->getClientOriginalExtension();
 			Image::make(Input::file('image')->getRealPath())->save('farms/images/rooms/'.$image);
-		}
-
-		$room->update(
+			$room->update(
 			array(
 					'image' => asset('farms/images/rooms/'.$image.'')
 				)
 			);
+		}
+
+		
 
 		$room->languages()->sync($data['room_description']);
 

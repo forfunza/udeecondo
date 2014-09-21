@@ -66,6 +66,8 @@ return array(
             {
                 $view->with('auth', Sentry::getUser());
             });
+
+             
         },
 
         // Listen on event before render a layout,
@@ -99,7 +101,7 @@ return array(
                 $theme->asset()->container('core-js')->usePath()->add('wysihtml5', 'js/bootstrap-wysihtml5/wysihtml5-0.3.0.js', array('jquery'));
                 $theme->asset()->container('core-js')->usePath()->add('bootstrap-wysihtml5', 'js/bootstrap-wysihtml5/bootstrap-wysihtml5.js', array('jquery'));
                 $theme->asset()->container('core-js')->usePath()->add('ckeditor', 'js/ckeditor/ckeditor.js', array('jquery'));
-                
+
                 //<!--Easy Pie Chart-->
                 $theme->asset()->container('core-js')->usePath()->add('easypiechart', 'js/easypiechart/jquery.easypiechart.js', array('jquery'));
                 //<!--Sparkline Chart-->

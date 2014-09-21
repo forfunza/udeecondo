@@ -117,7 +117,7 @@ class SlideshowsController extends AdminController {
 		
 
 		if(Input::hasFile('image')){
-			$image = 'http://placehold.it/697x465&text=Image';
+			
 			$dt = new DateTime;
 			$image = $dt->getTimestamp().'.'.Input::file('image')->getClientOriginalExtension();
 			Image::make(Input::file('image')->getRealPath())->save('farms/images/slideshows/'.$image);

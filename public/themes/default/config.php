@@ -67,6 +67,10 @@ return array(
             // {
             //     $view->with('auth', Auth::user());
             // });
+            $theme->partialComposer('footer', function($view)
+            {
+                $view->with('project', Project::find(1));
+            });
 
             
         },
