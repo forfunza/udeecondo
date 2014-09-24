@@ -126,8 +126,14 @@ input[type="text"].st{
 		margin-bottom:20px;
 		margin-top:30px;
 		}
-	.more-btn{
-		display:none;
+	.np-block{
+		position:relative;
+		}
+	.more-btn{}
+	.news-more{
+		position:absolute;
+		right:0px;
+		bottom:10px;
 		}
 	.inn-npnav .more-btn{
 		display: inline-block;
@@ -173,6 +179,7 @@ line-height: 16px;
 			.pi-content span.projectinfoRight.nl.ml ul{
 				margin-left:30px;
 				}
+			
 	}
 @media only screen and (max-width : 750px), only screen and (max-device-width : 750px){
 	.container,header,.maincontainer{
@@ -209,7 +216,10 @@ line-height: 16px;
 			background: #9f8030;
 			color: #fff;
 			}
-		
+		.arrm{
+			width: 50px;
+			bottom:-42px;
+			}
 	}
 	@media only screen and (max-width : 530px), only screen and (max-device-width : 530px){
 			.ft span{
@@ -274,5 +284,6 @@ line-height: 30px;
 		.fotorama__arr{
 			display:none !important;
 			}
+			
 	
 		}

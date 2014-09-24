@@ -722,3 +722,6 @@ font-family: 'Conv_Quark-Bold';
 .projectinfoRight ul li{
 	list-style:none;
 	}
+	.np-block .nt img{
+				width:100%;
+				}

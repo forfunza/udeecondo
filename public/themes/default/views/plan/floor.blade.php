@@ -12,7 +12,7 @@
     <a href="{{ action('HomeController@floor_detail') }}"><span class="floor-8 tooltipe" title="อาคาร ทองแท้"></span></a>
      <span class="arrm"><img src="{{ asset('themes/default/assets/images/arr-mtp.jpg') }}" /></span>
 </div>
-<div class="floor-mobi map-box">
+<!--<div class="floor-mobi map-box">
 	<a href="{{ action('HomeController@floor_detail') }}">อาคาร ก้าวหน้า <img src="{{ asset('themes/default/assets/images/plan/floor-1.jpg') }}" ></a>
     <a href="{{ action('HomeController@floor_detail') }}">อาคาร ขุมทรัพย์ <img src="{{ asset('themes/default/assets/images/plan/floor-2.jpg') }}" ></a>
     <a href="{{ action('HomeController@floor_detail') }}">อาคาร งอกงาม <img src="{{ asset('themes/default/assets/images/plan/floor-3.jpg') }}" ></a>
@@ -21,4 +21,4 @@
     <a href="{{ action('HomeController@floor_detail') }}">อาคาร ชัยชนะ <img src="{{ asset('themes/default/assets/images/plan/floor-6.jpg') }}" ></a>
     <a href="{{ action('HomeController@floor_detail') }}">อาคาร ดวงดี <img src="{{ asset('themes/default/assets/images/plan/floor-7.jpg') }}" ></a>
     <a href="{{ action('HomeController@floor_detail') }}">อาคาร ทองแท้ <img src="{{ asset('themes/default/assets/images/plan/floor-8.jpg') }}" ></a>
-</div>
+</div>-->
