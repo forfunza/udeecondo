@@ -1,4 +1,4 @@
-{{ Form::open(array('action' => array('NewsController@store'), 'method' => 'post', 'class' => 'form-horizontal bucket-form' , 'enctype' => 'multipart/form-data')) }}
+{{ Form::open(array('action' => array('JobsController@store'), 'method' => 'post', 'class' => 'form-horizontal bucket-form' , 'enctype' => 'multipart/form-data')) }}
 	<section class="panel">
 		<header class="panel-heading">
 			งาน

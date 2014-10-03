@@ -117,14 +117,23 @@ class HomeController extends BaseController {
         return $this->theme->scope('plan.floor', $view)->render();
 	}
 
-	public function floor_detail()
+	public function floor_detail($id)
 	{
 
-
-        $view = array();
-
-        
-        
+		$this->theme->asset()->container('addon-css')->usePath()->add('fancybox', 'styles/jquery.fancybox.css');
+        $this->theme->asset()->container('addon-js')->usePath()->add('fancybox', 'js/jquery.fancybox.js?v=2.1.5');
+		$this->theme->asset()->container('addon-inline')->writeScript('fancybox', '
+		    $(function() {
+		       
+			$(".fancybox").fancybox();
+		    })
+		');
+		$floors = BuildingFloor::where('building_id',$id)->get();
+		$building = Building::find($id);
+        $view = array(
+        	'floors' => $floors,
+        	'building' => $building
+        	);
 
         return $this->theme->scope('plan.floor-detail', $view)->render();
 	}

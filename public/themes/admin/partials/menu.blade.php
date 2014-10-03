@@ -21,10 +21,11 @@
                 </a>
                 <ul class="sub">
                     <li><a href="{{ action('ProjectsController@edit',1) }}">รายละเอียด</a></li>
-                    <li><a href="{{ action('UnitsController@index') }}">ยูนิต</a></li>
                     <li><a href="{{ action('ConceptsController@index') }}">แนวคิด</a></li>
-                    <li><a href="{{ action('RoomsController@index') }}">แปลนห้อง</a></li>
                     <li><a href="{{ action('FacilitiesController@index') }}">สิ่งอำนวยความสะดวก</a></li>
+                    <li><a href="{{ action('UnitsController@index') }}">ยูนิต</a></li>
+                    <li><a href="{{ action('BuildingsController@index') }}">อาคาร</a></li>
+                    <li><a href="{{ action('RoomsController@index') }}">แปลนห้อง</a></li>
                 </ul>
             </li>
             <li>

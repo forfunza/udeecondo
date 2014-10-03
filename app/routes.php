@@ -10,21 +10,33 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-Route::any('/test', function()
-{
-    header('Access-Control-Allow-Origin: *');
-    header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
-    header('Access-Control-Allow-Headers: Accept, X-Requested-With');
-    // without credentials we can use * for origin
-    // header('Access-Control-Allow-Credentials: false');
-    header('HTTP/1.1 200 OK', true);
-    $facility = Facility::all();
+// Route::any('/test', function()
+// {
+//     header('Access-Control-Allow-Origin: http://localhost:8100');
+//     header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
+//     header('Access-Control-Allow-Headers: Accept, X-Requested-With,Content-Type');
+//     header('Access-Control-Allow-Credentials: true');
+//     $facility = Facility::all();
 
-    return Response::json($facility);
+//     return Response::json($facility);
 
    
-    //dd($facility->languages);
-});
+//     //dd($facility->languages);
+// });
+
+// Route::any('/test/show/{id}', function()
+// {
+//     header('Access-Control-Allow-Origin: http://localhost:8100');
+//     header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
+//     header('Access-Control-Allow-Headers: Accept, X-Requested-With,Content-Type');
+//     header('Access-Control-Allow-Credentials: true');
+//     $facility = Facility::find(1);
+
+//     return Response::json($facility);
+
+   
+//     //dd($facility->languages);
+// });
 
 Route::group(
 array(
@@ -44,7 +56,7 @@ function()
 
     Route::get('/plan/master', 'HomeController@master');
     Route::get('/plan/floor', 'HomeController@floor');
-    Route::get('/plan/floor/detail', 'HomeController@floor_detail');
+    Route::get('/plan/floor/detail/{id}', 'HomeController@floor_detail');
     Route::get('/plan/room', 'HomeController@room');
 
     Route::get('/gallery', 'HomeController@gallery');
@@ -82,6 +94,7 @@ function()
     Route::resource('jobs', 'JobsController');
     Route::resource('progresses', 'ProgressesController');
     Route::resource('slideshows', 'SlideshowsController');
+    Route::resource('buildings', 'BuildingsController');
  
 });
 

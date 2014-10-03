@@ -90,6 +90,8 @@ return array(
                 $theme->asset()->usePath()->add('vertical', 'styles/vertical.news.slider.css',array('font'));
                 $theme->asset()->usePath()->add('fotorama', 'styles/fotorama.css',array('font'));
                 $theme->asset()->usePath()->add('media', 'styles/media.css',array('font'), array('media' => 'screen, projection'));
+                
+   
 
                 $theme->asset()->container('header')->usePath()->add('jquery', 'js/jquery.min.js');
                 $theme->asset()->container('header')->usePath()->add('chrome', 'js/chrome.js', array('jquery'));

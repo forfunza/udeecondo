@@ -1,6 +1,6 @@
 <?php
 
-class $NAME$ extends \BaseController {
+class $NAME$ extends \AdminController {
 
 	/**
 	 * Display a listing of $COLLECTION$
@@ -25,8 +25,7 @@ class $NAME$ extends \BaseController {
 	 */
 	public function create()
 	{
-		
-		return $this->theme->scope('$COLLECTION$.create', $$COLLECTION$)->render();
+		return $this->theme->scope('$COLLECTION$.create')->render();
 	}
 
 	/**
@@ -45,7 +44,7 @@ class $NAME$ extends \BaseController {
 
 		$MODEL$::create($data);
 
-		return Redirect::action('$COLLECTION$@index')->with('message','');
+		return Redirect::action('$NAME$@index')->with('message','');
 	}
 
 	/**
@@ -97,7 +96,7 @@ class $NAME$ extends \BaseController {
 
 		$$RESOURCE$->update($data);
 
-		return Redirect::action('$COLLECTION$@index')->with('message','');
+		return Redirect::action('$NAME$@index')->with('message','');
 	}
 
 	/**
@@ -110,7 +109,7 @@ class $NAME$ extends \BaseController {
 	{
 		$MODEL$::destroy($id);
 
-		return Redirect::action('$COLLECTION$@index')->with('message','');
+		return Redirect::action('$NAME$@index')->with('message','');
 	}
 
 }

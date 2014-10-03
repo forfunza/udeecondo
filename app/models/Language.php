@@ -30,4 +30,8 @@ class Language extends \Eloquent {
     public function progresses() {
         return $this->belongsToMany('Progress')->withPivot('name','description');    
     }
+
+    public function buildings() {
+        return $this->belongsToMany('Building')->withPivot('name');    
+    }
 }

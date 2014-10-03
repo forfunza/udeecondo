@@ -37,6 +37,6 @@ return [
 
     'seed_target_path'   => app_path('database/seeds'),
 
-    'view_target_path'   => app_path('views')
+    'view_target_path'   => public_path('themes/admin/views')
 
 ];
