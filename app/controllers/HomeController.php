@@ -74,8 +74,10 @@ class HomeController extends BaseController {
 	public function concept()
 	{
 
-
-        $view = array();
+		$concepts = Concept::all();
+        $view = array(
+        	'concepts' => $concepts
+        	);
 
         return $this->theme->scope('information.concept', $view)->render();
 	}
