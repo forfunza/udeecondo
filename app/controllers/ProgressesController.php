@@ -53,8 +53,6 @@ class ProgressesController extends AdminController {
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		
-
 		$image = 'http://placehold.it/697x465&text=Image';
 
 		if(Input::hasFile('image')){
@@ -70,6 +68,22 @@ class ProgressesController extends AdminController {
 					'image' => asset('farms/images/progress/'.$image.'')
 				)
 			);
+
+		if(Input::hasFile('image_add')){
+			
+			foreach ($data['image_add'] as $key => $img) {
+				
+				$dt = new DateTime;
+				$image = $dt->getTimestamp().'-'. sha1($img->getClientOriginalName()).'.'.$img->getClientOriginalExtension();
+				Image::make($img->getRealPath())->save('farms/images/progress/'.$image);
+				ProgressImage::create([
+					'images' => asset('farms/images/progress/'.$image),
+					'progress_id' => $progress->id
+					]);
+				
+			}
+			
+		}
 
 		$progress->languages()->sync($data['progress_description']);
 
@@ -135,6 +149,23 @@ class ProgressesController extends AdminController {
 					'image' => asset('farms/images/progress/'.$image.'')
 				)
 			);
+		}
+
+		if(Input::hasFile('image_add')){
+			ProgressImage::where('progress_id', $progress->id)->delete();
+			
+			foreach ($data['image_add'] as $key => $img) {
+				
+				$dt = new DateTime;
+				$image = $dt->getTimestamp().'-'. sha1($img->getClientOriginalName()).'.'.$img->getClientOriginalExtension();
+				Image::make($img->getRealPath())->save('farms/images/progress/'.$image);
+				ProgressImage::create([
+					'images' => asset('farms/images/progress/'.$image),
+					'progress_id' => $progress->id
+					]);
+				
+			}
+			
 		}
 
 		

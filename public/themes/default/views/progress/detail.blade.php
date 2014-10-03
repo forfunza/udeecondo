@@ -4,16 +4,18 @@
 <div class="pgr">
  <div id="slider-pg" class="flexslider-pg">
 <ul class="slides">
-  <li><img src="{{ $progress->image }}" /></li>
+  @foreach ($images as $img)
+  <li><img src="{{ $img->images }}" /></li>
+  @endforeach
 </ul>
 </div>
-<!-- <div id="carousel-pg" class="flexslider-pg">
+@if($images)
+<div id="carousel-pg" class="flexslider-pg">
 <ul class="slides">
-  <li><img src="{{ asset('themes/default/assets/images/pprgress.png') }}" /></li>
-  <li><img src="{{ asset('themes/default/assets/images/pprgress.png') }}" /></li>
-  <li><img src="{{ asset('themes/default/assets/images/pprgress.png') }}" /></li>
-  <li><img src="{{ asset('themes/default/assets/images/pprgress.png') }}" /></li>
-  <li><img src="{{ asset('themes/default/assets/images/pprgress.png') }}" /></li>
+	@foreach ($images as $img)
+  <li><img src="{{ $img->images }}" /></li>
+  @endforeach
 </ul>
-</div> -->
+</div>
+@endif
 </div>

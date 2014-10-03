@@ -16,9 +16,6 @@
         </div>
         @endforeach
         
-        
-        
-        
     </div>
     <div class="clear"></div>
     <a href="{{ action('HomeController@floor') }}" class="more-btn fbtn"><i class="marl"></i> กลับไปเลือกอาคาร</a>

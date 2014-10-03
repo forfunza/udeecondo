@@ -11,7 +11,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     {{ Theme::asset()->styles() }}
     {{ Theme::asset()->container('addon-css')->styles(); }}
+    <link rel="shortcut icon" href="{{ asset('themes/default/assets/styles/jquery.fancybox.css?v=2.1.5') }}" />
     {{ Theme::asset()->container('header')->scripts(); }}
+    <link rel="shortcut icon" href="{{ asset('themes/default/assets/js/jquery.fancybox.js?v=2.1.5') }}" />
     <link rel="shortcut icon" href="{{ asset('themes/default/assets/images/favicon.ico') }}" />
 </head>
 <body>
@@ -24,9 +26,13 @@
 </section>
 {{ Theme::partial('footer') }}
 {{ Theme::asset()->container('footer')->scripts(); }}
+
 <script type="text/javascript">
 $(window).load(function(){
-    $('.flexslider').flexslider();
+    
+    $('.flexslider').flexslider({
+        animation: "slide"
+      });
     $('#carousel-pg').flexslider({
         animation: "slide",
         controlNav: false,
@@ -53,8 +59,11 @@ $(document).ready(function() {
     });
 });
 </script>
+ 
 {{ Theme::asset()->container('addon-inline')->scripts(); }}
 {{ Theme::asset()->container('footer-bottom')->scripts(); }}
 {{ Theme::asset()->container('addon-js')->scripts(); }}
+
+
 </body>
 </html>

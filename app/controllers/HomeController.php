@@ -120,14 +120,14 @@ class HomeController extends BaseController {
 	public function floor_detail($id)
 	{
 
-		$this->theme->asset()->container('addon-css')->usePath()->add('fancybox', 'styles/jquery.fancybox.css');
-        $this->theme->asset()->container('addon-js')->usePath()->add('fancybox', 'js/jquery.fancybox.js?v=2.1.5');
-		$this->theme->asset()->container('addon-inline')->writeScript('fancybox', '
-		    $(function() {
-		       
-			$(".fancybox").fancybox();
-		    })
-		');
+	 
+	  $this->theme->asset()->container('addon-inline')->writeContent('fancy', '
+    <script type="text/javascript">
+        $(function() {
+            $(".fancybox").fancybox();
+        });
+    </script>
+');
 		$floors = BuildingFloor::where('building_id',$id)->get();
 		$building = Building::find($id);
         $view = array(
@@ -197,9 +197,11 @@ class HomeController extends BaseController {
 	public function progress_detail($id)
 	{
 		$progress = Language::find($this->language_id)->progresses->find($id);
+		$images = ProgressImage::where('progress_id',$id)->get();
 
         $view = array(
-        	'progress' => $progress
+        	'progress' => $progress,
+        	'images' => $images
         	);
 
         return $this->theme->scope('progress.detail', $view)->render();

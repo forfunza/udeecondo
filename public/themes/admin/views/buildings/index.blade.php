@@ -7,9 +7,7 @@
             </header>
             <div class="panel-body">
                 <div class="adv-table editable-table ">
-                    <div class="clearfix">
-                       
-                    </div>
+                   
                     <div class="space15"></div>
                     <table class="table table-striped table-hover table-bordered" id="editable-sample">
                         <thead>
@@ -24,7 +22,7 @@
                             <tr>
                                 <td>{{ $building->languages->first()->pivot->name }}</td>
                                 <td><a class="btn btn-info" href="{{ action('BuildingsController@edit',$building->id) }}">แปลนชั้น</a></td>
-                                
+                  
                             </tr>
                             @endforeach
                         @endif

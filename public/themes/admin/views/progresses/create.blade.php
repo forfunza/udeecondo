@@ -19,6 +19,7 @@
 			</ul>
 			<div class="panel-body">
 				
+				
 				<div class="form-group">
 					<label class="control-label col-md-2">รูปภาพ</label>
 					<div class="col-md-10">
@@ -39,6 +40,12 @@
 					</div>
 					
 				</div>
+				<div class="form-group">
+	                <label class="control-label col-md-2">รูปภาพ(เพิ่มเติม)</label>
+	                <div class="col-md-4">
+	                    <input type="file" name="image_add[]" class="default" multiple />
+	                </div>
+	            </div>
 				<div class="tab-content">
 					@foreach ($languages as $language)
 					<div id="data-{{ $language->id }}" class="tab-pane {{ $language->id == 1 ? 'active' : ''}}">
