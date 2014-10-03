@@ -5,7 +5,7 @@ nav{
 	z-index:6;}
 
 .menu{display:block;
-	padding-top: 12px;
+	padding-top: 4px;
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 	}
@@ -17,7 +17,7 @@ background:#678c22; opacity:1;}.menu ul{display:none;margin:0;padding:0;width:54
 		transition: 0.25s!important;
 		color:#a4ce55;
 		margin-right:0px;
-		font-size:18px;
+		font-size:20px;
 		}
 	.menu ul.sub-menu li a:after{
 		content:" |";
@@ -46,14 +46,14 @@ nav ul{
 	nav ul li{
 		list-style:none;
 		float:left;
-		font-size:20px;
-		font-family: 'Conv_Quark-Bold';
+		font-size:22px;
+		font-family:'thai_sans_literegular', 'Conv_Quark-Bold';
 		}
 		nav ul li a{
 			display:block;
 			-webkit-transition: 0s;
 			transition: 0s;
-			padding:3px 14px;
+			padding:3px 13px;
 			margin-right:3px;
 			}
 		nav ul li a.last{
