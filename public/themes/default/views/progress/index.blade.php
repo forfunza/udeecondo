@@ -1,7 +1,7 @@
 @if(!empty($progresses))
 @foreach ($progresses as $progress)
 <div class="np-block">
-	<a href="{{ action('HomeController@progress_detail',$progress->id) }}" class="more-btn"><i class="mar"></i> อ่านต่อ</a>
+	<a href="{{ action('HomeController@progress_detail',$progress->id) }}" class="more-btn news-more"><i class="mar"></i> อ่านต่อ</a>
 	<a  href="{{ action('HomeController@progress_detail',$progress->id) }}"><div class="nt"><img src="{{ $progress->image }}" /></div>
     <span class="pgon">{{ $progress->created_at->format('M Y') }}</span>
     <div class="ntoppic">{{ $progress->pivot->name }}</div>
