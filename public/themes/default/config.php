@@ -101,7 +101,7 @@ return array(
                 $theme->asset()->container('footer')->usePath()->add('zaccordion', 'js/jquery.zaccordion.js');
                 $theme->asset()->container('footer')->usePath()->add('flexslider', 'js/jquery.flexslider.js', array('zaccordion'));
                 
-                $theme->asset()->container('footer')->usePath()->add('slider', 'js/vertical.news.slider.js');
+                $theme->asset()->container('footer-bottom')->usePath()->add('slider', 'js/vertical.news.slider.js');
                 
 
                 

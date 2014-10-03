@@ -30,9 +30,7 @@
 <script type="text/javascript">
 $(window).load(function(){
     
-    $('.flexslider').flexslider({
-        animation: "slide"
-      });
+    $('.flexslider').flexslider();
     $('#carousel-pg').flexslider({
         animation: "slide",
         controlNav: false,
@@ -59,7 +57,6 @@ $(document).ready(function() {
     });
 });
 </script>
- 
 {{ Theme::asset()->container('addon-inline')->scripts(); }}
 {{ Theme::asset()->container('footer-bottom')->scripts(); }}
 {{ Theme::asset()->container('addon-js')->scripts(); }}
