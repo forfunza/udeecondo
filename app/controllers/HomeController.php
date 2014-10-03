@@ -122,14 +122,7 @@ class HomeController extends BaseController {
 	public function floor_detail($id)
 	{
 
-	 
-	  $this->theme->asset()->container('addon-inline')->writeContent('fancy', '
-    <script type="text/javascript">
-        $(function() {
-            $(".fancybox").fancybox();
-        });
-    </script>
-');
+	
 		$floors = BuildingFloor::where('building_id',$id)->orderBy('no','desc')->get();
 		$building = Building::find($id);
         $view = array(
