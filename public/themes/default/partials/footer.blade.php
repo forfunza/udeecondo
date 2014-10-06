@@ -17,7 +17,7 @@
          
         </div>
         <div class="fc-3">
-            <a href="index.html">
+            <a href="{{ action('HomeController@index') }}">
                 <img src="{{ asset('themes/default/assets/images/udeecondo-logo.png') }}" />
                 <span class="fl">www.udeecondo.com</span>
             </a>
