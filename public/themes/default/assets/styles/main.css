@@ -84,7 +84,7 @@ img{
 	margin-right:30px;
 	}
 .maincontainer{
-	margin-top:20px;
+	margin-top:25px;
 	clear:both;
 	position:relative;
 	}
@@ -210,6 +210,12 @@ input[type="submit"], input[type="reset"]{
 	text-align:right;
 	overflow: hidden;
 	}
+.fc-1 a{
+	opacity: 0.6;
+}
+.fc-1 a:hover{
+	opacity: 1;
+}
 .ft span.fl{
 	font-size:18px;
 	display:block;
@@ -228,36 +234,37 @@ footer{
 	display: block;
 	}
 .pi-content{
-	
 	font-family: 'thai_sans_literegular';
 	color: #FFF;
-	font-size: 18px;
+	font-size: 20px;
 	position: absolute;
-	line-height: 18px;
+	line-height: 10px;
 	right: 0px;
 	top: 0px;
-	width: 428px;
-	height: 648px;
-	padding-right: 5px;
-	padding-top: 30px;
+	width: 490px;
+	height: 576px;
+	padding-right: 16px;
+	padding-top: 20px;
 	overflow: auto;
 	word-break: break-word;
 	background: url(../images/info-bg.png);
-	padding-left: 50px;
+	padding-left: 25px;
 	font-weight: bold;
+	letter-spacing: -1px;
 	}
 .bg-project-info{
-	height:678px;
-	overflow:hidden;
+	height: 596px;
+	overflow: hidden;
 	margin-bottom: 30px;
-	position:relative;
+	position: relative;
 	}
 .bg-project-info img{
 	height: 100%;
+	width: 100%;
 	max-width: none;
-	position:absolute;
-	right:0px;
-	top:0px;
+	position: absolute;
+	/* right: 0px; */
+	top: 0px;
 	}
 .np-block{
 	clear:both;
@@ -674,6 +681,15 @@ font-family:'thai_sans_literegular', 'Conv_Quark-Bold';
 .fbtn .marl{
 	vertical-align:middle;
 	}
+.fbtn .marl.notop{
+	vertical-align:top;
+}
+.fade-1{
+	background-position: 0px 0px;
+right: 332px;
+top: 20px;
+width: 207px;
+}
 .arrm{
 	position: absolute;
 	bottom: 0px;
@@ -692,13 +708,13 @@ font-family:'thai_sans_literegular', 'Conv_Quark-Bold';
 .pi-content span{
 	display: inherit;
 	line-height:22px;
-	margin-bottom: 20px;
+	margin-bottom: 12px;
 	}
 .projectinfoLeft{
-	float:left;
-	clear:left;
-	margin-right:10px;
-	width: 86px;
+	float: left;
+	clear: left;
+	margin-right: 10px;
+	width: 157px;
 	}
 .projectinfoRight{
 	overflow:hidden;
@@ -725,3 +741,17 @@ font-family:'thai_sans_literegular', 'Conv_Quark-Bold';
 	.np-block .nt img{
 				width:100%;
 				}
+			.infotoppic{
+				color: #83C010;
+				font-size: 40px;
+			}
+.map-box{
+	margin-top: 42px;
+}
+.map-box a{
+	display: block;
+	float: left;
+	width: 30%;
+	margin: 10px;
+	height: 210px;
+}

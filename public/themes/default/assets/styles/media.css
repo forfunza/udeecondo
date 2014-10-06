@@ -65,7 +65,11 @@ input[type="text"].st{
 		}
 	.floor-mobi{
 		display:block;
+		text-align: center;
 		}
+	.mtp,.floor-web{
+		display: none;
+	}
 	.fld{
 		padding-right:0px;
 		}
@@ -77,6 +81,10 @@ input[type="text"].st{
 		margin-top: 0px !important;
 		margin-left: 10px !important;
 		}
+		.floor-mobi.map-box a{
+	height: auto;
+}
+
 }
 @media only screen and (min-width:981px) {}
 @media only screen and (min-width:980px) and (max-width:1100px){}
@@ -118,6 +126,8 @@ input[type="text"].st{
 		position:relative;
 		top:0px;
 		left:0px;
+		font-size: 24px;
+		margin-top: 12px;
 		}
 	.np-block .nt{
 		width:100%;
@@ -179,6 +189,13 @@ line-height: 16px;
 			.pi-content span.projectinfoRight.nl.ml ul{
 				margin-left:30px;
 				}
+			.map-box a{
+				width: 47%;
+				margin: 1.5%;
+			}
+.floor-mobi.map-box a{
+	height: auto;
+}
 			
 	}
 @media only screen and (max-width : 750px), only screen and (max-device-width : 750px){
@@ -219,6 +236,19 @@ line-height: 16px;
 		.arrm{
 			width: 50px;
 			bottom:-42px;
+			}
+			.infotoppic{
+				font-size: 20px;
+			}
+				.floor-mobi.map-box a{
+				height: auto;
+				width: auto;
+				float: none;
+				text-align: center;
+			}
+			.floor-mobi.map-box img{
+			width: auto;
+				max-width: 100%;			
 			}
 	}
 	@media only screen and (max-width : 530px), only screen and (max-device-width : 530px){
@@ -285,5 +315,11 @@ line-height: 30px;
 			display:none !important;
 			}
 			
-	
+	.map-box a{
+				width: 100%;
+				margin: 0;
+				margin-top: 20px;
+				padding-top: 10px;
+			}
+
 		}

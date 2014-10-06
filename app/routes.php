@@ -56,6 +56,9 @@ function()
 
     Route::get('/plan/master', 'HomeController@master');
     Route::get('/plan/floor', 'HomeController@floor');
+    Route::get('/plan/test', 'HomeController@test');
+    Route::get('/plan/test1', 'HomeController@test1');
+
     Route::get('/plan/floor/detail/{id}', 'HomeController@floor_detail');
     Route::get('/plan/room', 'HomeController@room');
 

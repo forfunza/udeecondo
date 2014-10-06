@@ -236,6 +236,40 @@ class HomeController extends BaseController {
         return $this->theme->scope('contact.job', $view)->render();
 	}
 
+	public function test()
+	{
+		
+		
+
+        $view = array(
+        	);
+
+      
+
+        return $this->theme->scope('plan.test', $view)->render();
+
+        
+
+
+	}
+
+		public function test1()
+	{
+		
+		
+
+        $view = array(
+        	);
+
+      
+
+        return $this->theme->scope('plan.test1', $view)->render();
+
+        
+
+
+	}
+
 	public function handleRegister()
 	{
 		Register::create(Input::all());
