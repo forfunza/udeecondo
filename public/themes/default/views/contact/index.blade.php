@@ -1,7 +1,7 @@
 <div class="cml">
 	<a class="fancybox" href="{{ asset('themes/default/assets/images/b-map.png') }}"><img src="{{ asset('themes/default/assets/images/b-map.png') }}" alt="" /></a>
     <ul>
-    	<li><a href="https://www.google.com/maps/d/edit?mid=zL__n7pq94wg.kA0G0twairc8" target="_blank"><span class="google-map"></span></a></li>
+    	<li><a href="https://www.google.com/maps/d/viewer?mid=zL__n7pq94wg.kA0G0twairc8" target="_blank"><span class="google-map"></span></a></li>
         <li><a class="fancybox" href="{{ asset('themes/default/assets/images/b-map.png') }}"><span class="zoom-map"></span></a></li>
         <!-- <li><a onclick="openWin()"><span class="print-map"></span></a></li> -->
     </ul>
