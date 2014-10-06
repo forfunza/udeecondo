@@ -196,6 +196,9 @@ line-height: 16px;
 .floor-mobi.map-box a{
 	height: auto;
 }
+.fotorama__caption{
+	display: none !important;
+}
 			
 	}
 @media only screen and (max-width : 750px), only screen and (max-device-width : 750px){
