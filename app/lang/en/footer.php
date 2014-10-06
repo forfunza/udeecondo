@@ -4,5 +4,5 @@
 
 return  array(
 	'more_information'   => 'For More Information',
-	'follow'   => 'Follow Us'
+	'follow'   => 'Follow Up'
 );
