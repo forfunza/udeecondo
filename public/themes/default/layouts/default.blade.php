@@ -10,8 +10,11 @@
     <title>{{ Theme::get('title') }}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     {{ Theme::asset()->styles() }}
+    
     {{ Theme::asset()->container('addon-css')->styles(); }}
     {{ Theme::asset()->container('header')->scripts(); }}
+    <script type="text/javascript" src="{{ asset('themes/default/assets/js/jquery.fancybox.js?v=2.1.5') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('themes/default/assets/styles/jquery.fancybox.css?v=2.1.5') }}" media="screen" />
     <link rel="shortcut icon" href="{{ asset('themes/default/assets/images/favicon.ico') }}" />
 </head>
 <body>
@@ -28,6 +31,7 @@
 <script type="text/javascript">
 $(window).load(function(){
         //$('.fancybox').fancybox();
+   
     $('.flexslider').flexslider();
     $('#carousel-pg').flexslider({
         animation: "slide",
@@ -53,6 +57,14 @@ $(document).ready(function() {
         width: 1024,
         height: 512
     });
+
+    $(document).ready(function() {
+    $(".fancybox").fancybox({
+        openEffect  : 'none',
+        closeEffect : 'none',
+         type: 'image'
+    });
+});
 });
 </script>
 {{ Theme::asset()->container('addon-inline')->scripts(); }}

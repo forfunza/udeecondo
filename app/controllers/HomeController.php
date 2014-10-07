@@ -94,6 +94,13 @@ class HomeController extends BaseController {
 	//Plan
 	public function master()
 	{
+		$this->theme->asset()->container('addon-css')->usePath()->add('tipsy', 'styles/tipsy.css');
+        $this->theme->asset()->container('addon-js')->usePath()->add('tipsy', 'js/jquery.tipsy.js');
+        $this->theme->asset()->container('addon-inline')->writeScript('tipsy', '
+		    $(function() {
+		         $(".tooltipe").tipsy({gravity: "e"});
+		    })
+		');
 
 
         $view = array();
@@ -121,6 +128,8 @@ class HomeController extends BaseController {
 
 	public function floor_detail($id)
 	{
+
+		
 
 	
 		$floors = BuildingFloor::where('building_id',$id)->orderBy('no','desc')->get();

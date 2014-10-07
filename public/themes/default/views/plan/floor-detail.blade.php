@@ -12,7 +12,9 @@
             
             <div class="news-content top-content">
             <h2 class="ct">: ชั้น {{ $floor->no }}</h2>
-            <a class="fancybox" href="{{ $floor->image }}"><img src="{{ $floor->image }}" /></a>
+            <a class="fancybox" rel="gallery1" href="{{ $floor->image }}">
+    <img src="{{ $floor->image }}" alt="" />
+</a>
         </div>
         @endforeach
         
@@ -25,3 +27,6 @@
         <a href="{{ action('HomeController@master') }}" class="more-btn fbtn"><i class="marl"></i> กลับไปเลือกอาคาร</a>
     </div>
 </div>
+
+
+
