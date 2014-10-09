@@ -24,7 +24,7 @@
     <a href="{{ action('HomeController@floor') }}" class="more-btn fbtn"><i class="marl"></i> กลับไปเลือกอาคาร</a>
     </div>
     <div class="floor-mobi">
-        <a href="{{ action('HomeController@master') }}" class="more-btn fbtn"><i class="marl"></i> กลับไปเลือกอาคาร</a>
+        <a href="{{ action('HomeController@floor') }}" class="more-btn fbtn"><i class="marl"></i> กลับไปเลือกอาคาร</a>
     </div>
 </div>
 

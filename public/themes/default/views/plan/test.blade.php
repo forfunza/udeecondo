@@ -8,4 +8,4 @@
     <div class="clear"></div>
 </div>
 <div class="clear"></div>
-<a href="{{ action('HomeController@master') }}" class="more-btn fbtn" style="margin-top:30px;"><i class="marl notop"></i> กลับไปผังโครงการ</a>
+<a href="{{ action('HomeController@floor') }}" class="more-btn fbtn" style="margin-top:30px;"><i class="marl notop"></i> กลับไปเลือกเฟส</a>

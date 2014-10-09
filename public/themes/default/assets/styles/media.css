@@ -168,8 +168,7 @@ input[type="text"].st{
 		text-align:center;
 		}
 		.pi-content{
-			font-family:Arial, Helvetica, sans-serif;
-			font-size:14px;
+			font-size:18px;
 			color: #423202;
 			font-weight: normal;
 			}
@@ -180,9 +179,16 @@ input[type="text"].st{
 			white-space:normal;
 			}
 		.pi-content span{
-			display: inline-block;
-line-height: 16px;
+			line-height: 20px;
+			padding-bottom: 3px;
 			}
+			.projectinfoLeft{
+				width: 140px;
+				
+				}
+				.pi-content span{
+					margin-bottom:5px;
+					}
 			.pi-content span.projectinfoRight.nl ul{
 				margin-top:10px;
 				}
@@ -199,7 +205,20 @@ line-height: 16px;
 .fotorama__caption{
 	display: none !important;
 }
-			
+.map-box a{
+	height:auto;
+	}
+		.maincontainer h1{
+			font-size:25px;
+			}	
+		.map-box{
+			margin-top:0px;
+			}
+		.mtip{
+			font-size: 20px;
+			margin-top: -10px;
+			float: left;
+			}
 	}
 @media only screen and (max-width : 750px), only screen and (max-device-width : 750px){
 	.container,header,.maincontainer{
