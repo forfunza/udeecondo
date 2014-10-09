@@ -87,6 +87,7 @@ img{
 	margin-top:25px;
 	clear:both;
 	position:relative;
+	min-height: 510px;
 	}
 .maincontainer h1{
 	font-size:30px;
