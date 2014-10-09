@@ -58,14 +58,16 @@ $(document).ready(function() {
         height: 512
     });
 
-    $(document).ready(function() {
+   
     $(".fancybox").fancybox({
         openEffect  : 'none',
         closeEffect : 'none',
          type: 'image'
     });
+
+    
 });
-});
+
 </script>
 {{ Theme::asset()->container('addon-inline')->scripts(); }}
 {{ Theme::asset()->container('footer-bottom')->scripts(); }}
