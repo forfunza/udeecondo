@@ -59,7 +59,14 @@ class ProgressesController extends AdminController {
 			
 			$dt = new DateTime;
 			$image = $dt->getTimestamp().'.'.Input::file('image')->getClientOriginalExtension();
-			Image::make(Input::file('image')->getRealPath())->save('farms/images/progress/'.$image);
+			$orig = Image::make(Input::file('image')->getRealPath());
+			$height = $orig->height();
+			if($height > 1024){
+				$orig->resize(null, 1024, function ($constraint) {
+				    $constraint->aspectRatio();
+				});
+			}
+			$orig->save('farms/images/progress/'.$image);
 			
 		}
 
@@ -75,7 +82,14 @@ class ProgressesController extends AdminController {
 				
 				$dt = new DateTime;
 				$image = $dt->getTimestamp().'-'. sha1($img->getClientOriginalName()).'.'.$img->getClientOriginalExtension();
-				Image::make($img->getRealPath())->save('farms/images/progress/'.$image);
+				$orig = Image::make($img->getRealPath());
+				$height = $orig->height();
+				if($height > 1024){
+					$orig->resize(null, 1024, function ($constraint) {
+					    $constraint->aspectRatio();
+					});
+				}
+				$orig->save('farms/images/progress/'.$image);
 				ProgressImage::create([
 					'images' => asset('farms/images/progress/'.$image),
 					'progress_id' => $progress->id
@@ -140,15 +154,18 @@ class ProgressesController extends AdminController {
 		}
 
 		if(Input::hasFile('image')){
-
+			
 			$dt = new DateTime;
 			$image = $dt->getTimestamp().'.'.Input::file('image')->getClientOriginalExtension();
-			Image::make(Input::file('image')->getRealPath())->save('farms/images/progress/'.$image);
-			$progress->update(
-			array(
-					'image' => asset('farms/images/progress/'.$image.'')
-				)
-			);
+			$orig = Image::make(Input::file('image')->getRealPath());
+			$height = $orig->height();
+			if($height > 1024){
+				$orig->resize(null, 1024, function ($constraint) {
+				    $constraint->aspectRatio();
+				});
+			}
+			$orig->save('farms/images/progress/'.$image);
+			
 		}
 
 		if(Input::hasFile('image_add')){
@@ -158,7 +175,14 @@ class ProgressesController extends AdminController {
 				
 				$dt = new DateTime;
 				$image = $dt->getTimestamp().'-'. sha1($img->getClientOriginalName()).'.'.$img->getClientOriginalExtension();
-				Image::make($img->getRealPath())->save('farms/images/progress/'.$image);
+				$orig = Image::make($img->getRealPath());
+				$height = $orig->height();
+				if($height > 1024){
+					$orig->resize(null, 1024, function ($constraint) {
+					    $constraint->aspectRatio();
+					});
+				}
+			$orig->save('farms/images/progress/'.$image);
 				ProgressImage::create([
 					'images' => asset('farms/images/progress/'.$image),
 					'progress_id' => $progress->id
