@@ -25,5 +25,5 @@
     </div>
 </section>
 <footer>
-    © 2014 T.K.H. Developmen Company Limited. All rights reserved
+    © 2014 T.K.H. Development Company Limited. All rights reserved
 </footer>

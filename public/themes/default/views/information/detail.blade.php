@@ -20,7 +20,7 @@
 <span class="projectinfoRight ">
 	<ul>
         @foreach ($rooms as $room) 
-        <li> :  {{ $room->pivot->name }}  </li>
+        <li> {{ $room->pivot->name }}  </li>
         @endforeach 
     </ul>
 </span>
