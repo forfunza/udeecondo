@@ -1,10 +1,12 @@
 <div class="cml">
-	<a class="fancybox" href="{{ asset('themes/default/assets/images/b-map.png') }}"><img src="{{ asset('themes/default/assets/images/b-map.png') }}" alt="" /></a>
+	<a id="map1" href="{{ asset('themes/default/assets/images/b-map.png') }}"><img src="{{ asset('themes/default/assets/images/b-map.png') }}" alt="" /></a>
     <ul>
     	<li><a href="https://www.google.com/maps/d/viewer?mid=zL__n7pq94wg.kA0G0twairc8" target="_blank"><span class="google-map"></span></a></li>
-        <li><a class="fancybox" href="{{ asset('themes/default/assets/images/b-map.png') }}"><span class="zoom-map"></span></a></li>
+        <li><a id="map2" href="{{ asset('themes/default/assets/images/b-map.png') }}"><span class="zoom-map"></span></a></li>
         <!-- <li><a onclick="openWin()"><span class="print-map"></span></a></li> -->
+
     </ul>
+
     <div class="clear"></div>
 </div>
 <div class="cmr">
@@ -34,3 +36,24 @@
     </div>
     <div class="job"><a href="{{ action('HomeController@job') }}"><i class="jmem"></i>ร่วมงานกับเรา<i class="jar"></i></a></div>
 </div>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+    $("#map2").fancybox({
+        openEffect  : 'none',
+        closeEffect : 'none',
+         type: 'image'
+    });
+
+   
+    $("#map1").fancybox({
+        openEffect  : 'none',
+        closeEffect : 'none',
+         type: 'image'
+    });
+
+    
+});
+
+</script>
