@@ -61,8 +61,8 @@ class ProgressesController extends AdminController {
 			$image = $dt->getTimestamp().'.'.Input::file('image')->getClientOriginalExtension();
 			$orig = Image::make(Input::file('image')->getRealPath());
 			$height = $orig->height();
-			if($height > 1024){
-				$orig->resize(null, 1024, function ($constraint) {
+			if($height > 800){
+				$orig->resize(null, 800, function ($constraint) {
 				    $constraint->aspectRatio();
 				});
 			}
@@ -84,8 +84,8 @@ class ProgressesController extends AdminController {
 				$image = $dt->getTimestamp().'-'. sha1($img->getClientOriginalName()).'.'.$img->getClientOriginalExtension();
 				$orig = Image::make($img->getRealPath());
 				$height = $orig->height();
-				if($height > 1024){
-					$orig->resize(null, 1024, function ($constraint) {
+				if($height > 800){
+					$orig->resize(null, 800, function ($constraint) {
 					    $constraint->aspectRatio();
 					});
 				}
@@ -159,8 +159,8 @@ class ProgressesController extends AdminController {
 			$image = $dt->getTimestamp().'.'.Input::file('image')->getClientOriginalExtension();
 			$orig = Image::make(Input::file('image')->getRealPath());
 			$height = $orig->height();
-			if($height > 1024){
-				$orig->resize(null, 1024, function ($constraint) {
+			if($height > 800){
+				$orig->resize(null, 800, function ($constraint) {
 				    $constraint->aspectRatio();
 				});
 			}
@@ -177,8 +177,8 @@ class ProgressesController extends AdminController {
 				$image = $dt->getTimestamp().'-'. sha1($img->getClientOriginalName()).'.'.$img->getClientOriginalExtension();
 				$orig = Image::make($img->getRealPath());
 				$height = $orig->height();
-				if($height > 1024){
-					$orig->resize(null, 1024, function ($constraint) {
+				if($height > 800){
+					$orig->resize(null, 800, function ($constraint) {
 					    $constraint->aspectRatio();
 					});
 				}
