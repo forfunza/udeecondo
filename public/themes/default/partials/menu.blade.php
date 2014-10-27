@@ -21,8 +21,8 @@
             </ul>
         </li>
         <li><a class="{{ Request::segment(2) == 'gallery' ? 'active' : ''  }}" href="{{ action('HomeController@gallery') }}">{{{ trans('menu.gallery') }}}</a></li>
-        <li><a class="{{ Request::segment(2) == 'news' ? 'active' : ''  }}" href="{{ action('HomeController@news') }}">{{{ trans('menu.news') }}}</a></li>
-        <li><a class="{{ Request::segment(2) == 'progress' ? 'active' : ''  }}" href="{{ action('HomeController@progress') }}">{{{ trans('menu.project_progress') }}}</a></li>
+        <li><a class="{{ Request::segment(2) == 'news' ? 'active' : ''  }}" href="#">{{{ trans('menu.news') }}}</a></li>
+        <li><a class="{{ Request::segment(2) == 'progress' ? 'active' : ''  }}" href="#">{{{ trans('menu.project_progress') }}}</a></li>
         <li><a class="{{ Request::segment(2) == 'contact' ? 'active' : ''  }}" href="{{ action('HomeController@contact') }}" class="last">{{{ trans('menu.contact') }}}</a></li>
     </ul>
 </nav>

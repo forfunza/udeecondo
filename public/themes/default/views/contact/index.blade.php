@@ -16,8 +16,8 @@
         	<span>ต.โสธร อ.เมืองฉะเชิงเทรา จ.เมืองฉะเชิงเทรา</span>
             <span> โทร. 09 2259 2259 , 09 2279 2279</span>
             <span> โทรสาร. 038 514 064 </span>     
-            <span>E-mail : <a href="#">info@udeecondo.com</a></span>
-            <span> เวลาทำการ : เปิดบริการทุกวัน</span> 
+            <span>E-mail : <a href="#">udeecondo@tkhd.co.th</a></span>
+            <span> เวลาทำการ : 9.00 น-18.00น</span> 
          </div>
     </div>
     <div class="cb">
