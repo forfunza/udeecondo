@@ -1,4 +1,4 @@
-<h1>แปลนห้อง</h1>
+<h1>{{{ trans('plan.room_type') }}}</h1>
 <div class="news-holder cf">
     <ul class="news-headlines fld">
         @foreach ($rooms as $room)
@@ -14,5 +14,5 @@
         @endforeach
     </div>
     <div class="clear"></div>
-    <a href="{{ action('HomeController@floor') }}" class="more-btn fbtn"><i class="marl"></i> กลับไปเลือกอาคาร</a>
+    <a href="{{ action('HomeController@floor') }}" class="more-btn fbtn"><i class="marl"></i> {{{ trans('plan.back') }}}</a>
 </div>

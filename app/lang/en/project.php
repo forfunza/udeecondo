@@ -1,8 +1,9 @@
 <?php
 
-# modified at 29-10-2014 16:34
+# modified at 29-10-2014 18:04
 
 return  array(
+	'car'        => 'car park',
 	'facility'   => 'Facilities',
 	'info'       => 'PROJECT INFO',
 	'location'   => 'Location',
@@ -12,4 +13,6 @@ return  array(
 	'secure'     => 'Security',
 	'type'       => 'Project Type',
 	'unit'       => 'Unit type and area',
+	'units'      => 'units',
+	'with'       => 'with',
 );
