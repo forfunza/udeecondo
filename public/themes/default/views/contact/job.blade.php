@@ -1,5 +1,5 @@
 <div class="jl">
-<h1>ร่วมงานกับเรา</h1>
+<h1>{{{ trans('contact.job') }}}</h1>
   <div id="Accordion1" class="Accordion" tabindex="0">
   @if(!empty($jobs))
   @foreach ($jobs as $job)
@@ -10,7 +10,7 @@
           {{ $job->pivot->description }}
           <strong>คุณสมบัติ :</strong><br />
           {{ $job->pivot->requirement }}
-          <strong>ติดต่อสอบถามข้อมูลเพิ่มเติม :</strong>
+          <strong>{{{ trans('contact.more') }}} :</strong>
 	{{ $job->pivot->information }}
       </div>
   </div>

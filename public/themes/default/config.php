@@ -36,7 +36,7 @@ return array(
         'before' => function($theme)
         {
             // You can remove this line anytime.
-            $theme->setTitle('Copyright ©  2014 - Udeecondo');
+            $theme->setTitle('UDEE CONDO  | อยู่ดี คอนโด คอนโดฉะเชิงเทรา เปิดมิติใหม่ ใช้ชีวิตติดโรบินสัน');
 
             // Breadcrumb template.
             // $theme->breadcrumb()->setTemplate('
