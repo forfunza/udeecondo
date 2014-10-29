@@ -708,6 +708,7 @@ width: 207px;
 	display: inherit;
 	line-height:22px;
 	margin-bottom: 12px;
+	min-height: 22px;
 	}
 .projectinfoLeft{
 	float: left;
