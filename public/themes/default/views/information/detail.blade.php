@@ -1,22 +1,22 @@
 <div class="bg-project-info"><img src="{{ asset('themes/default/assets/images/info-img.jpg') }}" /></div>
 <div class="pi-content">
-    <h2 class="infotoppic">ข้อมูลโครงการ</h2>
-    <span class="projectinfoLeft">ชื่อโครงการ </span>   <span class="projectinfoRight"> {{ $project->first()->pivot->name }}</span>
+    <h2 class="infotoppic">{{{ trans('project.info') }}}</h2>
+    <span class="projectinfoLeft">{{{ trans('project.name') }}} </span>   <span class="projectinfoRight"> {{ $project->first()->pivot->name }}</span>
 
-<span class="projectinfoLeft">ทำเลที่ตั้ง   </span>   <span class="projectinfoRight"> {{ $project->first()->pivot->address }} </span>
+<span class="projectinfoLeft">{{{ trans('project.location') }}}   </span>   <span class="projectinfoRight"> {{ $project->first()->pivot->address }} </span>
 
-<span class="projectinfoLeft">จำนวน (ชั้น/ยูนิต) </span>
+<span class="projectinfoLeft">{{{ trans('project.type') }}} </span>
 <span class="projectinfoRight">
 	<ul>
         @foreach ($units as $unit) 
-        <li>{{ $unit->pivot->name }} :  {{ $unit->pivot->building }} จำนวน  {{ $unit->unit }} ยูนิต</li>
+        <li>{{ $unit->pivot->name }} :  {{ $unit->pivot->building }} {{{ trans('project.with') }}}  {{ $unit->unit }} {{{ trans('project.units') }}}</li>
         @endforeach
     </ul>
 
 </span>
-<span class="projectinfoLeft">ราคาเริ่มต้น </span>  <span class="projectinfoRight"> {{ $project->first()->price }}</span>
+<span class="projectinfoLeft">{{{ trans('project.price') }}} </span>  <span class="projectinfoRight"> {{ $project->first()->price }}</span>
 
-<span class="projectinfoLeft">รูปแบบห้องชุด </span>
+<span class="projectinfoLeft">{{{ trans('project.unit') }}} </span>
 <span class="projectinfoRight ">
 	<ul>
         @foreach ($rooms as $room) 
@@ -25,16 +25,16 @@
     </ul>
 </span>
 
-<span class="projectinfoLeft">พื้นที่จอดรถ</span>
+<span class="projectinfoLeft">{{{ trans('project.parking') }}}</span>
 <span class="projectinfoRight">
 <ul>
     @foreach ($units as $unit) 
-    <li> {{ $unit->pivot->name }} :  {{ $unit->parking }} คัน</li>
+    <li> {{ $unit->pivot->name }} :  {{ $unit->parking }} {{{ trans('project.car') }}}</li>
     @endforeach
 </ul>
 </span>
 
-<span class="projectinfoLeft">สิ่งอำนวยความสะดวก </span>
+<span class="projectinfoLeft">{{{ trans('project.facility') }}} </span>
 <span class="projectinfoRight">
 <ul>
     	<li> 
@@ -45,7 +45,7 @@
 </ul>
 </span>
 
-<span class="projectinfoLeft">ระบบรักษาความปลอดภัย  </span>
+<span class="projectinfoLeft">{{{ trans('project.secure') }}}  </span>
 <span class="projectinfoRight">
 <ul>
     <li> {{ $project->first()->pivot->security }}  </li>

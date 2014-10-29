@@ -136,7 +136,8 @@ class HomeController extends BaseController {
 		$building = Building::find($id);
         $view = array(
         	'floors' => $floors,
-        	'building' => $building
+        	'building' => $building,
+        	'language_id' => $this->language_id
         	);
 
         return $this->theme->scope('plan.floor-detail', $view)->render();
@@ -222,7 +223,11 @@ class HomeController extends BaseController {
 			');
         }
 
-        $view = array();
+        $project = Language::find($this->language_id)->projects;
+
+        $view = array(
+        	'project' => $project
+        	);
 
         return $this->theme->scope('contact.index', $view)->render();
 	}
