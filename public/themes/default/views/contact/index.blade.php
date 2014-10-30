@@ -2,7 +2,7 @@
 	<a id="map1" href="{{ asset('themes/default/assets/images/map-udee.png') }}"><img src="{{ asset('themes/default/assets/images/map-udee.png') }}" alt="" /></a>
     <ul>
     	<li><a href="https://www.google.com/maps/d/viewer?mid=zL__n7pq94wg.kA0G0twairc8" target="_blank"><span class="google-map"></span></a></li>
-        <li><a id="map2" href="{{ asset('themes/default/assets/images/b-map.png') }}"><span class="zoom-map"></span></a></li>
+        <li><a id="map2" href="{{ asset('themes/default/assets/images/map-udee.png') }}"><span class="zoom-map"></span></a></li>
         <!-- <li><a onclick="openWin()"><span class="print-map"></span></a></li> -->
 
     </ul>
@@ -34,7 +34,7 @@
         {{ form::close() }}
         <div class="clear"></div>
     </div>
-    <div class="job"><a href="{{ action('HomeController@job') }}"><i class="jmem"></i>{{{ trans('contact.job') }}}<i class="jar"></i></a></div>
+    <!-- <div class="job"><a href="{{ action('HomeController@job') }}"><i class="jmem"></i>{{{ trans('contact.job') }}}<i class="jar"></i></a></div> -->
 </div>
 
 <script type="text/javascript">
