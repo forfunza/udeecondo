@@ -132,7 +132,7 @@ class HomeController extends BaseController {
 		
 
 	
-		$floors = BuildingFloor::where('building_id',$id)->orderBy('no','desc')->get();
+		$floors = BuildingFloor::where('building_id',$id)->where('status',1)->orderBy('no','desc')->get();
 		$building = Building::find($id);
         $view = array(
         	'floors' => $floors,
