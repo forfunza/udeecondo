@@ -22,7 +22,7 @@
 				</tr>
 				<tr>
 					<td>ข้อความ : </td>
-					<td></td>
+					<td>{{ $info }}</td>
 				</tr>
 			</table>
 		</div>

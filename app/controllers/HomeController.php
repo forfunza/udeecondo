@@ -288,7 +288,11 @@ class HomeController extends BaseController {
 	{
 		Register::create(Input::all());
 
-		Mail::send('emails.register', Input::all(), function($message)
+		$data = Input::all();
+
+		$data['info'] = Input::get('message');
+
+		Mail::send('emails.register', $data, function($message)
 		{
 		    $message->to('limplemoness@gmail.com')->subject('Register Notification');
 		});
