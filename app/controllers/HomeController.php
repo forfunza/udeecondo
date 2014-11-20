@@ -287,6 +287,13 @@ class HomeController extends BaseController {
 	public function handleRegister()
 	{
 		Register::create(Input::all());
+
+		Mail::send('emails.register', Input::all(), function($message)
+		{
+		    $message->to('limplemoness@gmail.com')->subject('Register Notification');
+		});
+
+
 		return Redirect::action('HomeController@index')->with('message','ได้รับข้อมูลเรียบร้อยแล้ว.');
 	
 	}

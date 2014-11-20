@@ -15,7 +15,7 @@ return array(
 	|
 	*/
 
-	'driver' => 'smtp',
+	'driver' => 'mail',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -28,14 +28,14 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp.mailgun.org',
+	'host' => 'localhost',
 
 	/*
 	|--------------------------------------------------------------------------
 	| SMTP Host Port
 	|--------------------------------------------------------------------------
 	|
-	| This is the SMTP port used by your application to deliver e-mails to
+	| This is the SMTP port used by your mailmailmailmailmailmailmailmailmailapplication to deliver e-mails to
 	| users of the application. Like the host we have set this value to
 	| stay compatible with the Mailgun e-mail application by default.
 	|
@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => null, 'name' => null),
+	'from' => array('address' => 'udeecondo@tkhd.co.th', 'name' => 'Udeecondo'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => null,
+	'username' => 'udeecondo@tkhd.co.th',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => null,
+	'password' => 'Tkhd1234.',
 
 	/*
 	|--------------------------------------------------------------------------
