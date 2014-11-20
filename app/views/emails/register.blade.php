@@ -17,7 +17,7 @@
 					<td>{{ $tel }}</td>
 				</tr>
 				<tr>
-					<td>อีเมล : ์</td>
+					<td>อีเมล์ :</td>
 					<td>{{ $email }}</td>
 				</tr>
 				<tr>
