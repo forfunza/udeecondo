@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'udeecondo@tkhd.co.th', 'name' => 'Udeecondo'),
+	'from' => array('address' => 'limplemoness@gmail.com', 'name' => 'Udeecondo'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'udeecondo@tkhd.co.th',
+	'username' => 'limplemoness@gmail.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'Tkhd1234.',
+	'password' => '050406808qq',
 
 	/*
 	|--------------------------------------------------------------------------

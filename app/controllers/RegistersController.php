@@ -53,6 +53,9 @@ class RegistersController extends AdminController {
 
 		Register::create($data);
 
+		
+		
+
 		return Redirect::action('registers@index')->with('message','');
 	}
 
@@ -122,7 +125,7 @@ class RegistersController extends AdminController {
 	{
 		Register::destroy($id);
 
-		return Redirect::action('registers@index')->with('message','');
+		return Redirect::action('RegistersController@index')->with('message','<strong>ยินดีด้วย!</strong> แก้ไขข้อมูลเรียบร้อยแล้ว.');
 	}
 
 }
