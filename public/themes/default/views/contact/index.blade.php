@@ -15,16 +15,16 @@
         <div class="cd">
         	<span>{{ $project->first()->pivot->address }}</span>
             <span> {{{ trans('contact.tel') }}}. {{ $project->first()->tel1 }} , {{ $project->first()->tel2 }}</span>
-            <span> {{{ trans('contact.fax') }}}. 038 514 064 </span>     
+            <span> {{{ trans('contact.fax') }}}. 038-514-064 </span>     
             <span>{{{ trans('contact.email') }}} : <a href="#">{{ $project->first()->email }}</a></span>
-            <span> {{{ trans('contact.time') }}} : 9.00 {{{ trans('contact.am') }}}-18.00 {{{ trans('contact.pm') }}}</span> 
+            <span> {{{ trans('contact.time') }}} : {{{ trans('contact.am') }}} - {{{ trans('contact.pm') }}}</span> 
          </div>
     </div>
     <div class="cb">
     	<h1>{{{ trans('contact.more') }}}</h1>
         {{ Form::open(array('action' => array('HomeController@handleContact'), 'method' => 'post')) }}
         	<input type="text" name="firstname" class="st" placeholder="{{{ trans('contact.name') }}} :" required />
-            <input type="text" name="lastname" class="st" placeholder="{{{ trans('contact.lname') }}} :" required />
+            <input type="text" name="lastname" class="st" placeholder="{{{ trans('contact.lnam') }}} :" required />
             <input type="text" name="tel" class="st" placeholder="{{{ trans('contact.tel') }}} :" />
             <input type="text" name="email" class="st" placeholder="{{{ trans('contact.email') }}} :" required />
             <input type="text" name="topic"  placeholder="{{{ trans('contact.subject') }}} :" required />
