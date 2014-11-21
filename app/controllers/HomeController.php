@@ -294,7 +294,7 @@ class HomeController extends BaseController {
 
 		Mail::send('emails.register', $data, function($message)
 		{
-		    $message->to('limplemoness@gmail.com')->subject('Register Notification');
+		    $message->to(Input::get('email'))->subject('Register Notification');
 		});
 
 
